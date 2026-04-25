@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Mercury vs Sky — Preseason Opener | Apr 25</title>
+<meta name="description" content="Phoenix Mercury 2026 preseason opener vs Chicago Sky. Historic first WNBA game in South Dakota. Tibbetts homecoming. New-look Mercury post-Sabally.">
+<meta property="og:title" content="Mercury vs Sky — Preseason Opener Intelligence">
+<meta property="og:description" content="First look at the new-look Mercury. Tibbetts comes home to South Dakota. Sky arrive without Reese. Historic first WNBA game in the state.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://meltckr.github.io/mercury-pregame-dashboard/og-image.jpg">
+<meta property="og:url" content="https://meltckr.github.io/mercury-pregame-dashboard/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mercury vs Sky — Preseason Opener Intelligence">
+<meta name="twitter:description" content="First look at the new-look Mercury. Tibbetts comes home to South Dakota. Sky arrive without Reese.">
+<meta name="twitter:image" content="https://meltckr.github.io/mercury-pregame-dashboard/og-image.jpg">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+:root {
+  --bg: #08080e;
+  --surface: #10101a;
+  --surface-2: #171724;
+  --surface-3: #1f1f32;
+  --border: #282840;
+  --border-hover: #383858;
+  --text: #e6e6f2;
+  --text-muted: #8686a0;
+  --text-dim: #5a5a74;
+  --mercury-teal: #00b4a6;
+  --mercury-teal-glow: rgba(0, 180, 166, 0.12);
+  --mercury-orange: #e8601e;
+  --mercury-orange-glow: rgba(232, 96, 30, 0.12);
+  --mercury-purple: #2d1b69;
+  --mercury-purple-glow: rgba(45, 27, 105, 0.25);
+  --accent: var(--mercury-teal);
+  --accent-glow: var(--mercury-teal-glow);
+  --win: #22c55e;
+  --loss: #ef4444;
+  --gold: #f59e0b;
+  --blue: #3b82f6;
+  --purple: #8b5cf6;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ═══ HEADER ═══ */
+.header {
+  background: linear-gradient(165deg, #0e0e1a 0%, #0d1420 40%, #0a1a1a 70%, #0e0e1a 100%);
+  padding: 20px 18px 22px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  right: -30%;
+  width: 70%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(0,180,166,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -20%;
+  width: 50%;
+  height: 150%;
+  background: radial-gradient(ellipse, rgba(45,27,105,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.brand-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.brand-logo svg { display: block; }
+
+.brand-tag {
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  color: var(--mercury-teal);
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid rgba(0,180,166,0.2);
+  border-radius: 4px;
+  background: rgba(0,180,166,0.06);
+}
+
+.game-header {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.game-event-date {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.matchup-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+
+.team-block {
+  text-align: center;
+  min-width: 88px;
+}
+
+.team-abbr {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.team-block.mercury .team-abbr { color: var(--mercury-teal); }
+
+.team-record {
+  font-size: 10px;
+  color: var(--text-dim);
+  font-weight: 600;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+.matchup-vs {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-dim);
+  letter-spacing: 1.5px;
+}
+
+.game-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin: 8px 0 12px;
+}
+
+.game-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 5px;
+  background: rgba(0,180,166,0.1);
+  border: 1px solid rgba(0,180,166,0.25);
+  color: var(--mercury-teal);
+}
+
+.game-venue {
+  font-size: 10.5px;
+  color: var(--text-dim);
+  margin-top: 8px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.game-venue .historic {
+  color: var(--mercury-orange);
+  font-weight: 700;
+}
+
+/* ═══ ACCORDIONS ═══ */
+.accordion-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.accordion-trigger:active {
+  background: var(--surface-2);
+}
+
+.accordion-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-num {
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--mercury-teal);
+  letter-spacing: 0.5px;
+  background: var(--mercury-teal-glow);
+  padding: 2px 7px;
+  border-radius: 4px;
+  min-width: 22px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.2px;
+}
+
+.accordion-arrow {
+  font-size: 11px;
+  color: var(--text-dim);
+  transition: transform 0.25s ease;
+}
+
+.accordion-item.open .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 10000px;
+}
+
+.section-body {
+  padding: 0 18px 20px;
+  background: var(--surface);
+}
+
+/* ═══ CONTENT ELEMENTS ═══ */
+.insight-text {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.insight-text strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.insight-text .highlight {
+  color: var(--mercury-teal);
+  font-weight: 600;
+}
+
+.insight-text .orange {
+  color: var(--mercury-orange);
+  font-weight: 600;
+}
+
+.card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.card-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.card-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.tag-mercury { background: var(--mercury-teal-glow); color: var(--mercury-teal); }
+.tag-sky { background: rgba(59,130,246,0.1); color: var(--blue); }
+.tag-watch { background: var(--mercury-orange-glow); color: var(--mercury-orange); }
+.tag-status { background: rgba(245,158,11,0.12); color: var(--gold); }
+
+.card-stats {
+  font-size: 12px;
+  color: var(--mercury-teal);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card-detail {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.card-detail strong {
+  color: var(--text);
+}
+
+/* Keys-to-the-game list */
+.key-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.key-item:last-child { border-bottom: none; }
+
+.key-num {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--mercury-teal);
+  min-width: 22px;
+  font-feature-settings: 'tnum';
+}
+
+.key-content { flex: 1; }
+
+.key-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+.key-text {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Matchup card (head-to-head) */
+.matchup-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.matchup-title {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--mercury-teal);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.vs-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.vs-side {
+  flex: 1;
+  text-align: center;
+}
+
+.vs-side.left { text-align: left; }
+.vs-side.right { text-align: right; }
+
+.vs-name {
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.vs-meta {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+.vs-divider {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-dim);
+  letter-spacing: 1.5px;
+}
+
+.matchup-note {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.matchup-note strong { color: var(--text); }
+
+/* Roster table */
+.roster-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.roster-row:last-child { border-bottom: none; }
+
+.roster-pos {
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--mercury-teal);
+  letter-spacing: 0.5px;
+  min-width: 28px;
+}
+
+.roster-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  flex: 1;
+}
+
+.roster-note {
+  font-size: 10px;
+  color: var(--text-dim);
+  text-align: right;
+  max-width: 160px;
+}
+
+.roster-status {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.status-signed { background: rgba(34,197,94,0.1); color: var(--win); }
+.status-new { background: var(--mercury-teal-glow); color: var(--mercury-teal); }
+.status-out { background: rgba(239,68,68,0.1); color: var(--loss); }
+.status-pending { background: rgba(245,158,11,0.12); color: var(--gold); }
+
+/* Quote block */
+.quote-block {
+  background: var(--surface-2);
+  border-left: 3px solid var(--mercury-teal);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+
+.quote-text {
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.65;
+  font-style: italic;
+}
+
+.quote-attr {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 6px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.quote-block.orange-quote {
+  border-left-color: var(--mercury-orange);
+}
+
+/* Storyline cards */
+.storyline {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+
+.storyline-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.storyline-text {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.storyline-text .teal { color: var(--mercury-teal); font-weight: 600; }
+.storyline-text .orange { color: var(--mercury-orange); font-weight: 600; }
+
+/* Calendar/schedule items */
+.calendar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.calendar-item:last-child { border-bottom: none; }
+
+.cal-date {
+  min-width: 52px;
+  text-align: center;
+}
+
+.cal-month {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--mercury-teal);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cal-day {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.cal-info { flex: 1; }
+
+.cal-event {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.cal-detail {
+  font-size: 10.5px;
+  color: var(--text-dim);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.cal-badge {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-top: 3px;
+}
+
+.cal-mercury { background: var(--mercury-teal-glow); color: var(--mercury-teal); }
+.cal-league { background: rgba(139,92,246,0.1); color: var(--purple); }
+.cal-tipoff { background: var(--mercury-orange-glow); color: var(--mercury-orange); }
+
+/* Section dividers */
+.section-divider {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 10px 0 6px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+.section-divider.teal { color: var(--mercury-teal); border-bottom-color: rgba(0,180,166,0.15); }
+
+/* Game info panel (top of executive summary) */
+.gameinfo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.gameinfo-cell {
+  background: var(--surface-3);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.gameinfo-label {
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--mercury-teal);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.gameinfo-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+}
+
+.gameinfo-sub {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+/* ═══ FOOTER ═══ */
+.footer {
+  text-align: center;
+  padding: 28px 18px 36px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.footer-tagline {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--mercury-teal);
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 14px;
+}
+
+.footer-logo { margin-bottom: 10px; }
+.footer-logo svg { display: inline-block; }
+
+.footer-message {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mercury-teal);
+  margin-top: 8px;
+  letter-spacing: 0.3px;
+}
+
+.footer-timestamp {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 8px;
+  letter-spacing: 0.3px;
+}
+
+.footer-accent {
+  height: 3px;
+  background: linear-gradient(90deg, var(--mercury-teal) 0%, var(--mercury-orange) 50%, var(--mercury-purple) 100%);
+  margin-top: 20px;
+  border-radius: 2px;
+  opacity: 0.6;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="brand-bar">
+    <div class="brand-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" width="170" height="32">
+        <circle cx="32" cy="32" r="30" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.2"/>
+        <circle cx="32" cy="32" r="22" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45"/>
+        <circle cx="32" cy="32" r="14" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.85"/>
+        <line x1="22" y1="32" x2="43" y2="32" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+        <polyline points="37,26 43,32 37,38" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <line x1="78" y1="12" x2="78" y2="52" stroke="rgba(255,255,255,0.25)" stroke-width="1.2"/>
+        <text x="94" y="38" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="800" font-size="28" fill="#ffffff" letter-spacing="-0.5">AVC</text>
+        <text x="94" y="53" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="400" font-size="7.8" fill="rgba(255,255,255,0.55)" letter-spacing="2.4">ACCELERATED VELOCITY CONSULTING</text>
+      </svg>
+    </div>
+    <span class="brand-tag">Ownership Intelligence</span>
+  </div>
+  <div class="game-header">
+    <div class="game-event-date">Saturday, April 25, 2026 · Preseason</div>
+    <div class="matchup-line">
+      <div class="team-block">
+        <div class="team-abbr">CHI</div>
+        <div class="team-record">Sky · Preseason</div>
+      </div>
+      <div class="matchup-vs">VS</div>
+      <div class="team-block mercury">
+        <div class="team-abbr">PHX</div>
+        <div class="team-record">Mercury · Preseason</div>
+      </div>
+    </div>
+    <div class="game-subtitle">Preseason Opener — New-Look Mercury Tip Off</div>
+    <div class="game-badge">Pregame Intel</div>
+    <div class="game-venue">
+      Sanford Pentagon · Sioux Falls, SD · 4:00 PM ET (1:00 PM PHX)<br>
+      <span class="historic">Historic First WNBA Game in South Dakota</span> · WCIU "The U" / FOX local
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 1: EXECUTIVE SUMMARY ═══ -->
+<div class="accordion-item open" id="sec-1">
+  <button class="accordion-trigger" onclick="toggleAccordion('sec-1')">
+    <div class="accordion-label">
+      <span class="section-num">01</span>
+      <span class="section-title">Executive Summary</span>
+    </div>
+    <span class="accordion-arrow">▼</span>
+  </button>
+  <div class="accordion-content">
+    <div class="section-body">
+
+      <div class="gameinfo-grid">
+        <div class="gameinfo-cell">
+          <div class="gameinfo-label">Tip-Off</div>
+          <div class="gameinfo-value">4:00 PM ET</div>
+          <div class="gameinfo-sub">1:00 PM Phoenix · 3:00 PM CT</div>
+        </div>
+        <div class="gameinfo-cell">
+          <div class="gameinfo-label">Venue</div>
+          <div class="gameinfo-value">Sanford Pentagon</div>
+          <div class="gameinfo-sub">Sioux Falls, SD</div>
+        </div>
+        <div class="gameinfo-cell">
+          <div class="gameinfo-label">Broadcast</div>
+          <div class="gameinfo-value">WCIU / FOX local</div>
+          <div class="gameinfo-sub">No national TV</div>
+        </div>
+        <div class="gameinfo-cell">
+          <div class="gameinfo-label">Significance</div>
+          <div class="gameinfo-value">First WNBA Game</div>
+          <div class="gameinfo-sub">In South Dakota history</div>
+        </div>
+      </div>
+
+      <p class="insight-text">
+        The 2026 Mercury take the floor for the first time tonight in <strong>Sioux Falls, South Dakota</strong> — the <span class="highlight">first WNBA game ever played in the state</span>. It's a homecoming for head coach <strong>Nate Tibbetts</strong> (SD native, entering Year 3) and assistant <strong>Megan Vogel</strong>, both with deep ties to the area.
+      </p>
+      <p class="insight-text">
+        This is the first live look at a <strong>retooled, post-Sabally Mercury</strong>. Phoenix is coming off a <span class="orange">2025 Finals run</span> (swept by Vegas), then watched <span class="orange">Satou Sabally walk to the New York Liberty</span> in free agency. GM Nick U'Ren responded with continuity: re-signing <strong>Copper, Thomas, Bonner, and Whitcomb</strong>. The big new addition is French forward <strong>Valériane Ayayi</strong> — a EuroLeague teammate of Alyssa Thomas at USK Praha.
+      </p>
+      <p class="insight-text">
+        Opponent: a <strong>dramatically remade Chicago Sky</strong> — without Angel Reese, who was traded to Atlanta on April 6 for two future first-rounders. Chicago's new core: <span class="highlight">Skylar Diggins, DiJonai Carrington, Kamilla Cardoso, Rickea Jackson</span>. Year 2 under HC Tyler Marsh.
+      </p>
+      <p class="insight-text">
+        <strong>What to watch:</strong> Tibbetts has signaled a <span class="highlight">faster, more movement-based offense</span>. Several Mercury players are still overseas and won't suit up. Expect a lot of camp-invite minutes. <span class="orange">Don't read into the score</span> — read the pace, the spacing, and how Ayayi looks running with AT.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 2: KEYS TO THE GAME ═══ -->
+<div class="accordion-item" id="sec-2">
+  <button class="accordion-trigger" onclick="toggleAccordion('sec-2')">
+    <div class="accordion-label">
+      <span class="section-num">02</span>
+      <span class="section-title">Keys to the Game</span>
+    </div>
+    <span class="accordion-arrow">▼</span>
+  </button>
+  <div class="accordion-content">
+    <div class="section-body">
+      <p class="insight-text">
+        Five things Phoenix needs to show tonight — preseason result is irrelevant, but these tells will matter.
+      </p>
+
+      <div class="key-item">
+        <div class="key-num">01</div>
+        <div class="key-content">
+          <div class="key-title">Pace & Movement Offense</div>
+          <div class="key-text">Tibbetts said this week: <em>"We're going to play to the second and third side more. We're not going to hold it as much."</em> Last year's offense leaned heavily on AT initiating; this year needs more flow without Sabally as a secondary creator.</div>
+        </div>
+      </div>
+
+      <div class="key-item">
+        <div class="key-num">02</div>
+        <div class="key-content">
+          <div class="key-title">Ayayi Integration with Thomas</div>
+          <div class="key-text">Valériane Ayayi has played alongside AT at <strong>USK Praha in EuroLeague</strong>. Tibbetts compares her to a young DeWanna Bonner — positional versatility, multi-skill forward. First on-court look at that pairing.</div>
+        </div>
+      </div>
+
+      <div class="key-item">
+        <div class="key-num">03</div>
+        <div class="key-content">
+          <div class="key-title">Natasha Mack's Conditioning</div>
+          <div class="key-text">Tibbetts highlighted Mack's offseason: <em>"10 to 15 pounds of muscle… in a lot better shape."</em> Conditioning was the limiter on her minutes. If the new build holds up, Phoenix has a real defensive anchor at the 5.</div>
+        </div>
+      </div>
+
+      <div class="key-item">
+        <div class="key-num">04</div>
+        <div class="key-content">
+          <div class="key-title">Defending Cardoso & Diggins PnR</div>
+          <div class="key-text">Chicago's offense will run through <strong>Skylar Diggins–Kamilla Cardoso</strong> pick-and-roll. With Mack and AT, Mercury have rim protection — but the on-ball coverage scheme is what to watch. New defensive coordinator setup this year.</div>
+        </div>
+      </div>
+
+      <div class="key-item">
+        <div class="key-num">05</div>
+        <div class="key-content">
+          <div class="key-title">The Camp Battle</div>
+          <div class="key-text">Phoenix brought <strong>24 players</strong> to camp — two full rosters. Watch for <span class="highlight">Kara Dunn, Maggie Doogan, Yarden Garzon, Shay Ciezki</span> — all undrafted but flagged league-wide as players who could surprise.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 3: AVAILABILITY ═══ -->
+<div class="accordion-item" id="sec-3">
+  <button class="accordion-trigger" onclick="toggleAccordion('sec-3')">
+    <div class="accordion-label">
+      <span class="section-num">03</span>
+      <span class="section-title">Availability & Roster</span>
+    </div>
+    <span class="accordion-arrow">▼</span>
+  </button>
+  <div class="accordion-content">
+    <div class="section-body">
+      <p class="insight-text">
+        Tibbetts on April 21: <em>"I don't think anyone will be back for Saturday's game."</em> Multiple Mercury players are still finishing overseas commitments. Expect a depleted but expanded camp roster on the floor.
+      </p>
+
+      <div class="section-divider teal">Mercury — Returning Core (Confirmed)</div>
+      <div class="roster-row">
+        <div class="roster-pos">G</div>
+        <div class="roster-name">Kahleah Copper</div>
+        <span class="roster-status status-signed">Signed</span>
+        <div class="roster-note">2-yr re-sign · 4× All-Star</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">F</div>
+        <div class="roster-name">Alyssa Thomas</div>
+        <span class="roster-status status-signed">Signed</span>
+        <div class="roster-note">Re-signed · Finals MVP-caliber</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">F</div>
+        <div class="roster-name">DeWanna Bonner</div>
+        <span class="roster-status status-signed">Signed</span>
+        <div class="roster-note">16-yr vet · 3rd all-time scorer</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">G</div>
+        <div class="roster-name">Sami Whitcomb</div>
+        <span class="roster-status status-signed">Signed</span>
+        <div class="roster-note">9-yr vet · floor spacer</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">C</div>
+        <div class="roster-name">Natasha Mack</div>
+        <span class="roster-status status-signed">Signed</span>
+        <div class="roster-note">Bigger, leaner — defensive anchor</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">G</div>
+        <div class="roster-name">Monique Akoa Makani</div>
+        <span class="roster-status status-signed">Signed</span>
+        <div class="roster-note">2025 breakout · Year 2</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">F</div>
+        <div class="roster-name">Kathryn Westbeld</div>
+        <span class="roster-status status-signed">Signed</span>
+        <div class="roster-note">Camp re-sign</div>
+      </div>
+
+      <div class="section-divider teal">Mercury — Key Newcomer</div>
+      <div class="roster-row">
+        <div class="roster-pos">F</div>
+        <div class="roster-name">Valériane Ayayi</div>
+        <span class="roster-status status-new">New</span>
+        <div class="roster-note">31, France · USK Praha w/ AT</div>
+      </div>
+
+      <div class="section-divider teal">Notable Departure</div>
+      <div class="roster-row">
+        <div class="roster-pos">F</div>
+        <div class="roster-name">Satou Sabally</div>
+        <span class="roster-status status-out">Out</span>
+        <div class="roster-note">Signed w/ NY Liberty (Apr 11)</div>
+      </div>
+
+      <div class="section-divider teal">Mercury — Camp Battle Watchlist</div>
+      <div class="roster-row">
+        <div class="roster-pos">G</div>
+        <div class="roster-name">Kara Dunn</div>
+        <span class="roster-status status-pending">Camp</span>
+        <div class="roster-note">Undrafted surprise</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">F</div>
+        <div class="roster-name">Maggie Doogan</div>
+        <span class="roster-status status-pending">Camp</span>
+        <div class="roster-note">"A scorer" — Tibbetts</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">F</div>
+        <div class="roster-name">Yarden Garzon</div>
+        <span class="roster-status status-pending">Camp</span>
+        <div class="roster-note">Indiana Univ. · Israeli wing</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">G</div>
+        <div class="roster-name">Shay Ciezki</div>
+        <span class="roster-status status-pending">Camp</span>
+        <div class="roster-note">Penn State · undrafted shooter</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">G</div>
+        <div class="roster-name">Kiana Williams</div>
+        <span class="roster-status status-pending">Camp</span>
+        <div class="roster-note">Vet PG depth</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 4: KEY MATCHUPS ═══ -->
+<div class="accordion-item" id="sec-4">
+  <button class="accordion-trigger" onclick="toggleAccordion('sec-4')">
+    <div class="accordion-label">
+      <span class="section-num">04</span>
+      <span class="section-title">Key Matchups</span>
+    </div>
+    <span class="accordion-arrow">▼</span>
+  </button>
+  <div class="accordion-content">
+    <div class="section-body">
+      <p class="insight-text">
+        Preseason caveat applies — rotations will be fluid and minutes split. But these are the chess pieces to watch when starters are on the floor together.
+      </p>
+
+      <div class="matchup-card">
+        <div class="matchup-title">Frontcourt Battle</div>
+        <div class="vs-row">
+          <div class="vs-side left">
+            <div class="vs-name">Alyssa Thomas</div>
+            <div class="vs-meta">PHX · Forward · 12-yr vet</div>
+          </div>
+          <div class="vs-divider">VS</div>
+          <div class="vs-side right">
+            <div class="vs-name">Kamilla Cardoso</div>
+            <div class="vs-meta">CHI · Center · 6'7"</div>
+          </div>
+        </div>
+        <div class="matchup-note">
+          AT comes off her 2025 Finals run nursing a shoulder issue. Cardoso, with Reese gone, is now the unquestioned face of the Sky frontcourt. <strong>Watch how Phoenix matches up</strong> — Mack on Cardoso lets AT roam, but exposes Mack to PnR coverage.
+        </div>
+      </div>
+
+      <div class="matchup-card">
+        <div class="matchup-title">Wing Scoring</div>
+        <div class="vs-row">
+          <div class="vs-side left">
+            <div class="vs-name">Kahleah Copper</div>
+            <div class="vs-meta">PHX · Guard · ex-Sky champion</div>
+          </div>
+          <div class="vs-divider">VS</div>
+          <div class="vs-side right">
+            <div class="vs-name">DiJonai Carrington</div>
+            <div class="vs-meta">CHI · Guard · DPOY-tier defender</div>
+          </div>
+        </div>
+        <div class="matchup-note">
+          <strong>Storyline matchup.</strong> Copper won her 2021 title in Chicago and is facing the franchise that traded her. Carrington is one of the best perimeter defenders in the league — this is the closest preseason gets to a regular-season test.
+        </div>
+      </div>
+
+      <div class="matchup-card">
+        <div class="matchup-title">Point Guard Pace</div>
+        <div class="vs-row">
+          <div class="vs-side left">
+            <div class="vs-name">M. Akoa Makani</div>
+            <div class="vs-meta">PHX · Year 2 · breakout candidate</div>
+          </div>
+          <div class="vs-divider">VS</div>
+          <div class="vs-side right">
+            <div class="vs-name">Skylar Diggins</div>
+            <div class="vs-meta">CHI · 7× All-Star · multi-yr deal</div>
+          </div>
+        </div>
+        <div class="matchup-note">
+          Diggins anchors Chicago's rebuild as the lead ball-handler. Akoa Makani earned trust late last season; this matchup will tell us whether Phoenix's PG room can hold up against a top-tier vet.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 5: STORYLINES ═══ -->
+<div class="accordion-item" id="sec-5">
+  <button class="accordion-trigger" onclick="toggleAccordion('sec-5')">
+    <div class="accordion-label">
+      <span class="section-num">05</span>
+      <span class="section-title">Storylines</span>
+    </div>
+    <span class="accordion-arrow">▼</span>
+  </button>
+  <div class="accordion-content">
+    <div class="section-body">
+
+      <div class="storyline">
+        <div class="storyline-title">A Homecoming for Tibbetts</div>
+        <div class="storyline-text">
+          South Dakota native Nate Tibbetts brings the Mercury home for the <span class="teal">first WNBA game ever played in the state</span>. Assistant Megan Vogel also has SD ties. The Sanford Pentagon is in Sioux Falls and has hosted top-level NCAA events but never a WNBA game — until tonight.
+        </div>
+      </div>
+
+      <div class="storyline">
+        <div class="storyline-title">Copper Faces Her First Franchise</div>
+        <div class="storyline-text">
+          Kahleah Copper played seven seasons in Chicago and won the <span class="orange">2021 WNBA title</span> there. She's now a 4× All-Star centerpiece for Phoenix. Even in preseason, this is a meaningful first encounter against the franchise that built her — now without Reese, but with Diggins and Carrington as the new face.
+        </div>
+      </div>
+
+      <div class="storyline">
+        <div class="storyline-title">Sky Without Reese — A Reset</div>
+        <div class="storyline-text">
+          Chicago shocked the league on April 6 by trading <span class="teal">Angel Reese to Atlanta</span> for two future first-rounders. The Sky pivoted hard — adding Diggins, Carrington, Jacy Sheldon, and Azurá Stevens. <span class="orange">Year 2 under HC Tyler Marsh</span> with a near-total roster reset around Cardoso.
+          </div>
+      </div>
+
+      <div class="storyline">
+        <div class="storyline-title">The Sabally Hangover</div>
+        <div class="storyline-text">
+          Sabally averaged <span class="teal">19.0 PPG / 7.0 RPG</span> in the 2025 playoffs before a Game 3 concussion ended her Finals. She signed with NY on Apr 11. Phoenix did not sign a like-for-like replacement — they're betting depth, continuity, and Tibbetts' system can absorb the loss.
+        </div>
+      </div>
+
+      <div class="storyline">
+        <div class="storyline-title">A New CBA, A Compressed Camp</div>
+        <div class="storyline-text">
+          The new WNBA collective bargaining agreement compressed free agency and the draft into a sprint. Phoenix held back early before announcing a wave of re-signings on April 12. Camp opened April 19 — <span class="teal">one of the shortest runways in WNBA history</span> heading into May 9 opener at Vegas.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 6: COACHING & FRONT OFFICE ═══ -->
+<div class="accordion-item" id="sec-6">
+  <button class="accordion-trigger" onclick="toggleAccordion('sec-6')">
+    <div class="accordion-label">
+      <span class="section-num">06</span>
+      <span class="section-title">Voices · Coaching & Front Office</span>
+    </div>
+    <span class="accordion-arrow">▼</span>
+  </button>
+  <div class="accordion-content">
+    <div class="section-body">
+
+      <div class="quote-block">
+        <div class="quote-text">"You have to lean into who you are. Anytime you have a team with Alyssa Thomas on it, you're going to be an elite-level defensive team. You're going to compete every night. And then offensively, with the things that have happened this offseason, we're going to have to get into some more movement stuff offensively, playing to the second, third side."</div>
+        <div class="quote-attr">— Nate Tibbetts, head coach (Apr 19, 2026)</div>
+      </div>
+
+      <div class="quote-block">
+        <div class="quote-text">"Last season I think it was just Kahleah and Jackie that were the two returners. Now there's about seven returners on this team… we're definitely farther ahead than we were last year at this time just because we kind of know each other."</div>
+        <div class="quote-attr">— Nate Tibbetts on continuity (Apr 21, 2026)</div>
+      </div>
+
+      <div class="quote-block">
+        <div class="quote-text">"Where Mac has come from two years ago to now… she's probably gained 10 to 15 pounds of muscle this offseason. Part of the reason why at times we haven't played her as much as we needed to is because of her conditioning. She's in a lot better shape."</div>
+        <div class="quote-attr">— Tibbetts on Natasha Mack</div>
+      </div>
+
+      <div class="quote-block orange-quote">
+        <div class="quote-text">"Establishing that sort of pipeline of [international] talent is something we didn't have in years past. So we're very excited."</div>
+        <div class="quote-attr">— Nick U'Ren, GM (Apr 12, 2026)</div>
+      </div>
+
+      <div class="quote-block">
+        <div class="quote-text">"I don't think anyone [overseas] will be back for Saturday's game… we got to focus on who's here. When those players come back, they'll be ready."</div>
+        <div class="quote-attr">— Tibbetts on availability for tonight</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 7: UPCOMING CALENDAR ═══ -->
+<div class="accordion-item" id="sec-7">
+  <button class="accordion-trigger" onclick="toggleAccordion('sec-7')">
+    <div class="accordion-label">
+      <span class="section-num">07</span>
+      <span class="section-title">What's Next</span>
+    </div>
+    <span class="accordion-arrow">▼</span>
+  </button>
+  <div class="accordion-content">
+    <div class="section-body">
+
+      <div class="calendar-item">
+        <div class="cal-date">
+          <div class="cal-month">Apr</div>
+          <div class="cal-day">25</div>
+        </div>
+        <div class="cal-info">
+          <div class="cal-event">Mercury vs Chicago Sky · Preseason</div>
+          <div class="cal-detail">Sanford Pentagon, Sioux Falls SD · 4:00 PM ET</div>
+          <span class="cal-badge cal-tipoff">Tonight</span>
+        </div>
+      </div>
+
+      <div class="calendar-item">
+        <div class="cal-date">
+          <div class="cal-month">Apr</div>
+          <div class="cal-day">29</div>
+        </div>
+        <div class="cal-info">
+          <div class="cal-event">Mercury vs Japan National Team · Preseason</div>
+          <div class="cal-detail">Mountain America Center, Phoenix · International friendly</div>
+          <span class="cal-badge cal-mercury">Mercury</span>
+        </div>
+      </div>
+
+      <div class="calendar-item">
+        <div class="cal-date">
+          <div class="cal-month">May</div>
+          <div class="cal-day">9</div>
+        </div>
+        <div class="cal-info">
+          <div class="cal-event">Mercury @ Las Vegas · Regular Season Opener</div>
+          <div class="cal-detail">T-Mobile Arena · 3:30 PM ET (ABC)</div>
+          <span class="cal-badge cal-tipoff">Season Tip</span>
+        </div>
+      </div>
+
+      <div class="calendar-item">
+        <div class="cal-date">
+          <div class="cal-month">May</div>
+          <div class="cal-day">10</div>
+        </div>
+        <div class="cal-info">
+          <div class="cal-event">Mercury @ Golden State · Expansion debut</div>
+          <div class="cal-detail">Chase Center · 8:30 PM ET</div>
+          <span class="cal-badge cal-league">League</span>
+        </div>
+      </div>
+
+      <div class="calendar-item">
+        <div class="cal-date">
+          <div class="cal-month">May</div>
+          <div class="cal-day">12</div>
+        </div>
+        <div class="cal-info">
+          <div class="cal-event">Mercury vs Minnesota · Home Opener</div>
+          <div class="cal-detail">Mortgage Matchup Center · 10:00 PM ET</div>
+          <span class="cal-badge cal-mercury">Home Opener</span>
+        </div>
+      </div>
+
+      <div class="calendar-item">
+        <div class="cal-date">
+          <div class="cal-month">May</div>
+          <div class="cal-day">15</div>
+        </div>
+        <div class="cal-info">
+          <div class="cal-event">Mercury vs Chicago · Regular Season Rematch</div>
+          <div class="cal-detail">Mortgage Matchup Center · 10:00 PM ET</div>
+          <span class="cal-badge cal-mercury">Mercury</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <div class="footer-tagline">#DOMINATE</div>
+  <div class="footer-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" width="140" height="26">
+      <circle cx="32" cy="32" r="30" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.12"/>
+      <circle cx="32" cy="32" r="22" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.25"/>
+      <circle cx="32" cy="32" r="14" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.45"/>
+      <line x1="22" y1="32" x2="43" y2="32" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" opacity="0.5"/>
+      <polyline points="37,26 43,32 37,38" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.5"/>
+      <line x1="78" y1="12" x2="78" y2="52" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
+      <text x="94" y="38" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="800" font-size="28" fill="rgba(255,255,255,0.4)" letter-spacing="-0.5">AVC</text>
+      <text x="94" y="53" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="400" font-size="7.8" fill="rgba(255,255,255,0.25)" letter-spacing="2.4">ACCELERATED VELOCITY CONSULTING</text>
+    </svg>
+  </div>
+  <div class="footer-message">Let's start the season strong, Mat.</div>
+  <div class="footer-timestamp">Generated Saturday, April 25, 2026</div>
+  <div class="footer-accent"></div>
+</div>
+
+</div>
+
+<script>
+function toggleAccordion(id) {
+  const item = document.getElementById(id);
+  item.classList.toggle('open');
+}
+
+let tapCount = 0;
+let tapTimer = null;
+document.querySelector('.header').addEventListener('click', function() {
+  tapCount++;
+  if (tapCount === 1) {
+    tapTimer = setTimeout(function() { tapCount = 0; }, 350);
+  } else if (tapCount === 2) {
+    clearTimeout(tapTimer);
+    tapCount = 0;
+    const items = document.querySelectorAll('.accordion-item');
+    const allOpen = Array.from(items).every(i => i.classList.contains('open'));
+    items.forEach(i => {
+      if (allOpen) i.classList.remove('open');
+      else i.classList.add('open');
+    });
+  }
+});
+</script>
+</body>
+</html>
