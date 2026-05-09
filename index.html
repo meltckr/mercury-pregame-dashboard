@@ -3,17 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Mercury vs Sky — Preseason Opener | Apr 25</title>
-<meta name="description" content="Phoenix Mercury 2026 preseason opener vs Chicago Sky. Historic first WNBA game in South Dakota. Tibbetts homecoming. New-look Mercury post-Sabally.">
-<meta property="og:title" content="Mercury vs Sky — Preseason Opener Intelligence">
-<meta property="og:description" content="First look at the new-look Mercury. Tibbetts comes home to South Dakota. Sky arrive without Reese. Historic first WNBA game in the state.">
+<title>PHX @ LV — Regular Season Opener | Mercury Pregame Intel | May 9</title>
+<meta name="description" content="Mercury at Aces, 3:30 PM ET on ABC. Finals rematch — Aces swept Mercury 4-0 in 2025. PHX +7.5. Sabally gone, Ayayi in. Tibbetts: 'When we look in the mirror, we don't see that.' Title quest begins.">
+
+<!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://meltckr.github.io/mercury-pregame-dashboard/og-image.jpg">
 <meta property="og:url" content="https://meltckr.github.io/mercury-pregame-dashboard/">
+<meta property="og:title" content="PHX @ LV | Regular Season Opener — 2025 Finals Rematch | Mercury Pregame Intel">
+<meta property="og:description" content="Mercury at Aces, 3:30 PM ET on ABC. Finals rematch. PHX +7.5. Sabally gone, Ayayi in. Tibbetts: 'When we look in the mirror, we don't see [7th best].' Title quest begins.">
+<meta property="og:image" content="https://meltckr.github.io/mercury-pregame-dashboard/og-image.jpg">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mercury vs Sky — Preseason Opener Intelligence">
-<meta name="twitter:description" content="First look at the new-look Mercury. Tibbetts comes home to South Dakota. Sky arrive without Reese.">
+<meta name="twitter:title" content="PHX @ LV | Regular Season Opener — 2025 Finals Rematch | Mercury Pregame Intel">
+<meta name="twitter:description" content="Mercury at Aces, 3:30 PM ET on ABC. Finals rematch. PHX +7.5. Sabally gone, Ayayi in. Tibbetts: 'When we look in the mirror, we don't see [7th best].' Title quest begins.">
 <meta name="twitter:image" content="https://meltckr.github.io/mercury-pregame-dashboard/og-image.jpg">
+
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
@@ -187,6 +192,13 @@ body {
   color: var(--mercury-teal);
 }
 
+.game-badge.finals-badge {
+  background: rgba(232,96,30,0.12);
+  border-color: rgba(232,96,30,0.3);
+  color: var(--mercury-orange);
+  margin-left: 6px;
+}
+
 .game-venue {
   font-size: 10.5px;
   color: var(--text-dim);
@@ -195,7 +207,7 @@ body {
   line-height: 1.55;
 }
 
-.game-venue .historic {
+.game-venue .highlight-orange {
   color: var(--mercury-orange);
   font-weight: 700;
 }
@@ -325,7 +337,7 @@ body {
 }
 
 .tag-mercury { background: var(--mercury-teal-glow); color: var(--mercury-teal); }
-.tag-sky { background: rgba(59,130,246,0.1); color: var(--blue); }
+.tag-aces { background: rgba(139,92,246,0.1); color: var(--purple); }
 .tag-watch { background: var(--mercury-orange-glow); color: var(--mercury-orange); }
 .tag-status { background: rgba(245,158,11,0.12); color: var(--gold); }
 
@@ -379,7 +391,16 @@ body {
   line-height: 1.6;
 }
 
-/* Matchup card (head-to-head) */
+/* Profile card — Key Matchups (teal border glow) */
+.profile-card {
+  background: var(--surface-2);
+  border: 1px solid rgba(0,180,166,0.22);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 14px rgba(0,180,166,0.07);
+}
+
 .matchup-card {
   background: var(--surface-2);
   border: 1px solid var(--border);
@@ -445,6 +466,14 @@ body {
 
 .matchup-note strong { color: var(--text); }
 
+.stat-watch {
+  font-size: 10px;
+  color: var(--mercury-teal);
+  font-weight: 700;
+  margin-top: 6px;
+  font-style: italic;
+}
+
 /* Roster table */
 .roster-row {
   display: flex;
@@ -487,10 +516,12 @@ body {
   text-transform: uppercase;
 }
 
-.status-signed { background: rgba(34,197,94,0.1); color: var(--win); }
-.status-new { background: var(--mercury-teal-glow); color: var(--mercury-teal); }
+.status-starter { background: var(--mercury-teal-glow); color: var(--mercury-teal); }
+.status-reserve { background: rgba(139,92,246,0.1); color: var(--purple); }
+.status-new { background: rgba(0,180,166,0.15); color: var(--mercury-teal); }
+.status-dtd { background: rgba(245,158,11,0.12); color: var(--gold); }
 .status-out { background: rgba(239,68,68,0.1); color: var(--loss); }
-.status-pending { background: rgba(245,158,11,0.12); color: var(--gold); }
+.status-signed { background: rgba(34,197,94,0.1); color: var(--win); }
 
 /* Quote block */
 .quote-block {
@@ -544,6 +575,113 @@ body {
 
 .storyline-text .teal { color: var(--mercury-teal); font-weight: 600; }
 .storyline-text .orange { color: var(--mercury-orange); font-weight: 600; }
+
+.storyline-source {
+  font-size: 9.5px;
+  color: var(--text-dim);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Betting grids */
+.bet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.bet-cell {
+  background: var(--surface-3);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.bet-label {
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--mercury-teal);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.bet-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.bet-sub {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+.outlook-cell {
+  background: var(--surface-3);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.outlook-label {
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--mercury-teal);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.outlook-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+}
+
+.outlook-sub {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+/* How-to-watch panel */
+.watch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.watch-cell {
+  background: var(--surface-3);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.watch-label {
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--mercury-teal);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.watch-value {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.watch-sub {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
 
 /* Calendar/schedule items */
 .calendar-item {
@@ -606,6 +744,7 @@ body {
 .cal-mercury { background: var(--mercury-teal-glow); color: var(--mercury-teal); }
 .cal-league { background: rgba(139,92,246,0.1); color: var(--purple); }
 .cal-tipoff { background: var(--mercury-orange-glow); color: var(--mercury-orange); }
+.cal-home { background: rgba(34,197,94,0.08); color: var(--win); }
 
 /* Section dividers */
 .section-divider {
@@ -622,7 +761,7 @@ body {
 
 .section-divider.teal { color: var(--mercury-teal); border-bottom-color: rgba(0,180,166,0.15); }
 
-/* Game info panel (top of executive summary) */
+/* Game info panel */
 .gameinfo-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -656,6 +795,36 @@ body {
   font-size: 10px;
   color: var(--text-dim);
   margin-top: 2px;
+}
+
+/* Pill tags */
+.pill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.pill-tag {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  letter-spacing: 0.2px;
+}
+
+/* Section note */
+.section-note {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  font-style: italic;
+  line-height: 1.5;
 }
 
 /* ═══ FOOTER ═══ */
@@ -724,23 +893,26 @@ body {
     <span class="brand-tag">Ownership Intelligence</span>
   </div>
   <div class="game-header">
-    <div class="game-event-date">Saturday, April 25, 2026 · Preseason</div>
+    <div class="game-event-date">Saturday, May 9, 2026 · Regular Season Opener · 2025 Finals Rematch</div>
     <div class="matchup-line">
-      <div class="team-block">
-        <div class="team-abbr">CHI</div>
-        <div class="team-record">Sky · Preseason</div>
-      </div>
-      <div class="matchup-vs">VS</div>
       <div class="team-block mercury">
         <div class="team-abbr">PHX</div>
-        <div class="team-record">Mercury · Preseason</div>
+        <div class="team-record">Mercury · Away</div>
+      </div>
+      <div class="matchup-vs">@</div>
+      <div class="team-block">
+        <div class="team-abbr">LV</div>
+        <div class="team-record">Aces · Home</div>
       </div>
     </div>
-    <div class="game-subtitle">Preseason Opener — New-Look Mercury Tip Off</div>
-    <div class="game-badge">Pregame Intel</div>
+    <div class="game-subtitle">Regular Season Opener — First Game Since the Sweep</div>
+    <div style="display:flex;justify-content:center;gap:6px;flex-wrap:wrap;">
+      <div class="game-badge">Pregame Intel</div>
+      <div class="game-badge finals-badge">2025 Finals Rematch</div>
+    </div>
     <div class="game-venue">
-      Sanford Pentagon · Sioux Falls, SD · 4:00 PM ET (1:00 PM PHX)<br>
-      <span class="historic">Historic First WNBA Game in South Dakota</span> · AZ Family (PHX) / WCIU "The U" (CHI)
+      3:30 PM ET · 12:30 PM PT · T-Mobile Arena, Las Vegas<br>
+      <span class="highlight-orange">ABC National Broadcast · Doubleheader with Wings @ Fever 1 PM ET</span>
     </div>
   </div>
 </div>
@@ -750,7 +922,7 @@ body {
   <button class="accordion-trigger" onclick="toggleAccordion('sec-1')">
     <div class="accordion-label">
       <span class="section-num">01</span>
-      <span class="section-title">Executive Summary</span>
+      <span class="section-title">📖 Executive Summary</span>
     </div>
     <span class="accordion-arrow">▼</span>
   </button>
@@ -760,50 +932,45 @@ body {
       <div class="gameinfo-grid">
         <div class="gameinfo-cell">
           <div class="gameinfo-label">Tip-Off</div>
-          <div class="gameinfo-value">4:00 PM ET</div>
-          <div class="gameinfo-sub">1:00 PM Phoenix · 3:00 PM CT</div>
+          <div class="gameinfo-value">3:30 PM ET</div>
+          <div class="gameinfo-sub">12:30 PM PT · 2:30 PM CT</div>
         </div>
         <div class="gameinfo-cell">
           <div class="gameinfo-label">Venue</div>
-          <div class="gameinfo-value">Sanford Pentagon</div>
-          <div class="gameinfo-sub">Sioux Falls, SD</div>
+          <div class="gameinfo-value">T-Mobile Arena</div>
+          <div class="gameinfo-sub">Las Vegas, NV</div>
         </div>
         <div class="gameinfo-cell">
           <div class="gameinfo-label">Broadcast</div>
-          <div class="gameinfo-value">AZ Family / WCIU</div>
-          <div class="gameinfo-sub">Local only · No national TV</div>
+          <div class="gameinfo-value">ABC — National</div>
+          <div class="gameinfo-sub">Mercury's first 2026 national TV game</div>
         </div>
-        <div class="gameinfo-cell">
-          <div class="gameinfo-label">Significance</div>
-          <div class="gameinfo-value">First WNBA Game</div>
-          <div class="gameinfo-sub">In South Dakota history</div>
-        </div>
-      </div>
-
-      <div class="gameinfo-grid" style="margin-bottom: 4px;">
         <div class="gameinfo-cell">
           <div class="gameinfo-label">Spread</div>
-          <div class="gameinfo-value">PHX −4.5</div>
-          <div class="gameinfo-sub">Bleacher Report opening line</div>
-        </div>
-        <div class="gameinfo-cell">
-          <div class="gameinfo-label">Mercury Status</div>
-          <div class="gameinfo-value">No injury report</div>
-          <div class="gameinfo-sub">Multiple players still overseas</div>
+          <div class="gameinfo-value">PHX +7.5</div>
+          <div class="gameinfo-sub">Aces -7.5 (-110) · Road dogs</div>
         </div>
       </div>
 
+      <div class="pill-tags">
+        <span class="pill-tag">🏆 2025 Finals rematch</span>
+        <span class="pill-tag">💎 A'ja's supermax season opener</span>
+        <span class="pill-tag">🎯 Sabally → Ayayi swap</span>
+        <span class="pill-tag">📺 ABC national stage</span>
+        <span class="pill-tag">⚡ AT vs A'ja, Round Whatever</span>
+        <span class="pill-tag">📊 Spread says +7.5 — Mercury are road dogs</span>
+        <span class="pill-tag">🪞 "When we look in the mirror, we don't see that"</span>
+        <span class="pill-tag">🔁 Continuity (6 returning Mercury)</span>
+      </div>
+
       <p class="insight-text">
-        The 2026 Mercury take the floor for the first time tonight in <strong>Sioux Falls, South Dakota</strong> — the <span class="highlight">first WNBA game ever played in the state</span>. It's a homecoming for head coach <strong>Nate Tibbetts</strong> (SD native, entering Year 3) and assistant <strong>Megan Vogel</strong>, both with deep ties to the area.
+        The 2026 regular season opens with the most charged matchup on the WNBA calendar: the <strong>2025 Finals rematch</strong>. Las Vegas swept Phoenix 4-0 last October — including a <span class="orange">Wilson buzzer-beater in Game 3</span> that effectively ended any Mercury comeback hope. This is the first time these teams have met since that final horn. Tonight, the Aces raise their banner. Mercury answers by showing up. Per <a href="https://www.si.com/wnba/wnba-2025-playoffs-finals-draws-in-historic-ratings" style="color:var(--mercury-teal);text-decoration:none;">Sports Illustrated</a>, the series averaged 1.5M viewers on ABC/ESPN — the biggest WNBA Finals audience in years.
       </p>
       <p class="insight-text">
-        This is the first live look at a <strong>retooled, post-Sabally Mercury</strong>. Phoenix is coming off a <span class="orange">2025 Finals run</span> (swept by Vegas), then watched <span class="orange">Satou Sabally walk to the New York Liberty</span> in free agency. GM Nick U'Ren responded with continuity: re-signing <strong>Copper, Thomas, Bonner, and Whitcomb</strong>. The big new addition is French forward <strong>Valériane Ayayi</strong> — a EuroLeague teammate of Alyssa Thomas at USK Praha.
+        The Mercury arrive in Vegas <strong>retooled but not rebuilt</strong>. Gone is <span class="orange">Satou Sabally</span> (16.3 PPG — their leading scorer in 2025), who signed with the now-championship-odds-favorite New York Liberty. In her place: <span class="highlight">Valériane Ayayi</span>, a French international forward who played alongside Alyssa Thomas at USK Praha in EuroLeague. Six returners provide the core chemistry Tibbetts is building around per <a href="https://www.espn.com/wnba/story/_/id/48705965" style="color:var(--mercury-teal);text-decoration:none;">ESPN's Opening Day Rosters</a>. The national media clocked Phoenix at 7th in the West. Tibbetts clocked the national media right back.
       </p>
       <p class="insight-text">
-        Opponent: a <strong>dramatically remade Chicago Sky</strong> — without Angel Reese, who was traded to Atlanta on April 6 for two future first-rounders. Chicago's new core: <span class="highlight">Skylar Diggins, DiJonai Carrington, Kamilla Cardoso, Rickea Jackson</span>. Year 2 under HC Tyler Marsh.
-      </p>
-      <p class="insight-text">
-        <strong>What to watch:</strong> Tibbetts has signaled a <span class="highlight">faster, more movement-based offense</span>. Per his Apr 21 media avail, multiple Mercury players still finishing overseas commitments are not expected to suit up tonight. Expect heavy camp-invite minutes. <span class="orange">Don't read into the score</span> — read the pace, the spacing, and how Ayayi looks running with AT.
+        Las Vegas, meanwhile, <strong>ran it back</strong>. Wilson, Young, Gray, Loyd all signed. Wilson inked a <span class="highlight">historic supermax on April 15</span>. Becky Hammon enters Year 5. ESPN's BPI projects the Aces at <span class="orange">28.6 wins</span> with a 98.2% playoff probability. They are the heavy favorite at +425 on the title board per <a href="https://www.covers.com/wnba/wnba-championship-odds" style="color:var(--mercury-teal);text-decoration:none;">Covers.com</a>. Mercury sit at +2500. The number says this is a different tier — tonight is where Phoenix begins proving otherwise. Preseason says they're ready: <span class="highlight">2-0</span>, including a 108-104 win over Chicago and an 86-60 dismantling of Japan's national team at Mortgage Matchup Center.
       </p>
     </div>
   </div>
@@ -814,165 +981,213 @@ body {
   <button class="accordion-trigger" onclick="toggleAccordion('sec-2')">
     <div class="accordion-label">
       <span class="section-num">02</span>
-      <span class="section-title">Keys to the Game</span>
+      <span class="section-title">🎯 Keys to the Game</span>
     </div>
     <span class="accordion-arrow">▼</span>
   </button>
   <div class="accordion-content">
     <div class="section-body">
       <p class="insight-text">
-        Five things Phoenix needs to show tonight — preseason result is irrelevant, but these tells will matter.
+        Five things Phoenix must execute to pull the upset in Las Vegas. The Aces are 7.5-point favorites — beating that number, let alone the game, requires discipline in each of these areas.
       </p>
 
       <div class="key-item">
         <div class="key-num">01</div>
         <div class="key-content">
-          <div class="key-title">Pace & Movement Offense</div>
-          <div class="key-text">Tibbetts said this week: <em>"We're going to play to the second and third side more. We're not going to hold it as much."</em> Last year's offense leaned heavily on AT initiating; this year needs more flow without Sabally as a secondary creator.</div>
+          <div class="key-title">Contain A'ja Wilson</div>
+          <div class="key-text">Wilson is the 4× MVP, reigning champion, and just signed the largest contract in WNBA history. Last regular-season matchup (Aug 15, 2025): 30 PTS / 16 REB in an 86-83 Aces win. If she approaches those numbers, Vegas wins by double digits. AT must front her early, force rotations, and make Wilson work for every touch.</div>
         </div>
       </div>
 
       <div class="key-item">
         <div class="key-num">02</div>
         <div class="key-content">
-          <div class="key-title">Ayayi Integration with Thomas</div>
-          <div class="key-text">Valériane Ayayi has played alongside AT at <strong>USK Praha in EuroLeague</strong>. Tibbetts compares her to a young DeWanna Bonner — positional versatility, multi-skill forward. First on-court look at that pairing.</div>
+          <div class="key-title">Win the 3-Point Battle</div>
+          <div class="key-text">Mercury don't have the size or depth to outmuscle Vegas in the paint. Their path runs through spacing — Whitcomb, Copper, and Ayayi all need to be threats from deep. Copper shot 4-of-6 from three in the preseason opener. Sustaining that volume against a more disciplined Aces closeout unit is the offensive equation.</div>
         </div>
       </div>
 
       <div class="key-item">
         <div class="key-num">03</div>
         <div class="key-content">
-          <div class="key-title">Natasha Mack's Conditioning</div>
-          <div class="key-text">Tibbetts highlighted Mack's offseason: <em>"10 to 15 pounds of muscle… in a lot better shape."</em> Conditioning was the limiter on her minutes. If the new build holds up, Phoenix has a real defensive anchor at the 5.</div>
+          <div class="key-title">Take Care of the Ball vs Gray</div>
+          <div class="key-text">Chelsea Gray turns turnovers into instant offense. She's one of the best pick-and-roll orchestrators in WNBA history. Akoa Makani and the Mercury guard unit must limit live-ball mistakes — each Mercury turnover compounds Vegas's already formidable fast-break advantage.</div>
         </div>
       </div>
 
       <div class="key-item">
         <div class="key-num">04</div>
         <div class="key-content">
-          <div class="key-title">Defending Cardoso & Diggins PnR</div>
-          <div class="key-text">Chicago's offense will run through <strong>Skylar Diggins–Kamilla Cardoso</strong> pick-and-roll. With Mack and AT, Mercury have rim protection — but the on-ball coverage scheme is what to watch. New defensive coordinator setup this year.</div>
+          <div class="key-title">Get to the Free-Throw Line</div>
+          <div class="key-text">In a game where the Aces have home-crowd energy and a ring ceremony glow, Mercury need to draw fouls and stay on the line. AT is an 80%+ FT shooter. Copper, Mack, and Linskens inside — every contested touch in the paint matters. Foul management on Wilson is equally critical: don't gift her extra possessions.</div>
         </div>
       </div>
 
       <div class="key-item">
         <div class="key-num">05</div>
         <div class="key-content">
-          <div class="key-title">The Camp Battle</div>
-          <div class="key-text">Phoenix brought <strong>24 players</strong> to camp — two full rosters. Watch for <span class="highlight">Kara Dunn, Maggie Doogan, Yarden Garzon, Shay Ciezki</span> — all undrafted but flagged league-wide as players who could surprise.</div>
+          <div class="key-title">Weather the Aces' Mid-Game Run</div>
+          <div class="key-text">Vegas is notorious for explosive scoring bursts that ice games. The Finals Game 3 Q3 (Aces 21, PHX 16) showed how quickly the margin widens. Mercury must hang within striking distance through three quarters — don't let one bad 4-minute stretch compound into a 15-point hole they can't close from.</div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══ SECTION 3: AVAILABILITY ═══ -->
+<!-- ═══ SECTION 3: AVAILABILITY & ROSTER ═══ -->
 <div class="accordion-item" id="sec-3">
   <button class="accordion-trigger" onclick="toggleAccordion('sec-3')">
     <div class="accordion-label">
       <span class="section-num">03</span>
-      <span class="section-title">Availability & Roster</span>
+      <span class="section-title">🏥 Availability & Roster</span>
     </div>
     <span class="accordion-arrow">▼</span>
   </button>
   <div class="accordion-content">
     <div class="section-body">
       <p class="insight-text">
-        Tibbetts on April 21: <em>"I don't think anyone will be back for Saturday's game."</em> Multiple Mercury players are still finishing overseas commitments. Expect a depleted but expanded camp roster on the floor.
+        Mercury opens the regular season with their full 15-woman roster largely healthy. Two day-to-day designations to monitor. Aces have one day-to-day. Per <a href="https://www.espn.com/wnba/story/_/id/48705965" style="color:var(--mercury-teal);text-decoration:none;">ESPN Opening Day Rosters</a> and <a href="https://herhoopstats.substack.com/p/2026-wnba-opening-day-roster-breakdowns-part-two" style="color:var(--mercury-teal);text-decoration:none;">Her Hoop Stats</a>.
       </p>
 
-      <div class="section-divider teal">Mercury — Returning Core (Confirmed)</div>
+      <div class="section-divider teal">Mercury — Day-to-Day</div>
       <div class="roster-row">
-        <div class="roster-pos">G</div>
-        <div class="roster-name">Kahleah Copper</div>
-        <span class="roster-status status-signed">Signed</span>
-        <div class="roster-note">2-yr re-sign · 4× All-Star</div>
+        <div class="roster-pos">SG</div>
+        <div class="roster-name">Jovana Nogic</div>
+        <span class="roster-status status-dtd">DTD</span>
+        <div class="roster-note">Serbian national · game-time decision</div>
       </div>
       <div class="roster-row">
-        <div class="roster-pos">F</div>
-        <div class="roster-name">Alyssa Thomas</div>
-        <span class="roster-status status-signed">Signed</span>
-        <div class="roster-note">Re-signed · Finals MVP-caliber</div>
+        <div class="roster-pos">SF</div>
+        <div class="roster-name">Noémie Brochant</div>
+        <span class="roster-status status-dtd">DTD</span>
+        <div class="roster-note">French forward · game-time decision</div>
+      </div>
+
+      <div class="section-divider teal">Mercury — Starting Five (Projected)</div>
+      <div class="roster-row">
+        <div class="roster-pos">PG</div>
+        <div class="roster-name">Monique Akoa Makani</div>
+        <span class="roster-status status-starter">Starter</span>
+        <div class="roster-note">Year 2 · 2025 breakout</div>
       </div>
       <div class="roster-row">
-        <div class="roster-pos">F</div>
-        <div class="roster-name">DeWanna Bonner</div>
-        <span class="roster-status status-signed">Signed</span>
-        <div class="roster-note">16-yr vet · 3rd all-time scorer</div>
-      </div>
-      <div class="roster-row">
-        <div class="roster-pos">G</div>
+        <div class="roster-pos">SG</div>
         <div class="roster-name">Sami Whitcomb</div>
-        <span class="roster-status status-signed">Signed</span>
+        <span class="roster-status status-starter">Starter</span>
         <div class="roster-note">9-yr vet · floor spacer</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">SF</div>
+        <div class="roster-name">Kahleah Copper</div>
+        <span class="roster-status status-starter">Starter</span>
+        <div class="roster-note">4× All-Star · 2-yr re-sign</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">PF</div>
+        <div class="roster-name">Alyssa Thomas</div>
+        <span class="roster-status status-starter">Starter</span>
+        <div class="roster-note">All-WNBA · every MVP list</div>
       </div>
       <div class="roster-row">
         <div class="roster-pos">C</div>
         <div class="roster-name">Natasha Mack</div>
-        <span class="roster-status status-signed">Signed</span>
-        <div class="roster-note">Bigger, leaner — defensive anchor</div>
+        <span class="roster-status status-starter">Starter</span>
+        <div class="roster-note">Retooled · defensive anchor</div>
+      </div>
+
+      <div class="section-divider teal">Mercury — Key Reserves</div>
+      <div class="roster-row">
+        <div class="roster-pos">SF</div>
+        <div class="roster-name">DeWanna Bonner</div>
+        <span class="roster-status status-reserve">Reserve</span>
+        <div class="roster-note">16-yr vet · 3rd all-time scorer</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">PF</div>
+        <div class="roster-name">Valériane Ayayi</div>
+        <span class="roster-status status-new">New</span>
+        <div class="roster-note">French national · AT's Praha teammate</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">PG</div>
+        <div class="roster-name">Kiana Williams</div>
+        <span class="roster-status status-reserve">Reserve</span>
+        <div class="roster-note">16 pts in preseason opener</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">C</div>
+        <div class="roster-name">Kyara Linskens</div>
+        <span class="roster-status status-new">New</span>
+        <div class="roster-note">6'5" Belgian center · backup big</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">SF</div>
+        <div class="roster-name">Sha Carter</div>
+        <span class="roster-status status-reserve">Reserve</span>
+        <div class="roster-note">Depth wing</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">PF</div>
+        <div class="roster-name">Peyton Williams</div>
+        <span class="roster-status status-reserve">Reserve</span>
+        <div class="roster-note">Depth forward</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">F</div>
+        <div class="roster-name">Marta Suárez</div>
+        <span class="roster-status status-reserve">Reserve</span>
+        <div class="roster-note">Developmental · ex-Valkyries pick</div>
       </div>
       <div class="roster-row">
         <div class="roster-pos">G</div>
-        <div class="roster-name">Monique Akoa Makani</div>
-        <span class="roster-status status-signed">Signed</span>
-        <div class="roster-note">2025 breakout · Year 2</div>
-      </div>
-      <div class="roster-row">
-        <div class="roster-pos">F</div>
-        <div class="roster-name">Kathryn Westbeld</div>
-        <span class="roster-status status-signed">Signed</span>
-        <div class="roster-note">Camp re-sign</div>
-      </div>
-
-      <div class="section-divider teal">Mercury — Key Newcomer</div>
-      <div class="roster-row">
-        <div class="roster-pos">F</div>
-        <div class="roster-name">Valériane Ayayi</div>
-        <span class="roster-status status-new">New</span>
-        <div class="roster-note">31, France · USK Praha w/ AT</div>
+        <div class="roster-name">Shay Ciezki</div>
+        <span class="roster-status status-reserve">Reserve</span>
+        <div class="roster-note">Penn State · developmental</div>
       </div>
 
       <div class="section-divider teal">Notable Departure</div>
       <div class="roster-row">
         <div class="roster-pos">F</div>
         <div class="roster-name">Satou Sabally</div>
-        <span class="roster-status status-out">Out</span>
-        <div class="roster-note">Signed w/ NY Liberty (Apr 11)</div>
+        <span class="roster-status status-out">Gone</span>
+        <div class="roster-note">→ NY Liberty (16.3 PPG in 2025)</div>
       </div>
 
-      <div class="section-divider teal">Mercury — Camp Battle Watchlist</div>
-      <div class="roster-row">
-        <div class="roster-pos">G</div>
-        <div class="roster-name">Kara Dunn</div>
-        <span class="roster-status status-pending">Camp</span>
-        <div class="roster-note">Undrafted surprise</div>
-      </div>
+      <div class="section-divider teal">Las Vegas Aces — Availability</div>
       <div class="roster-row">
         <div class="roster-pos">F</div>
-        <div class="roster-name">Maggie Doogan</div>
-        <span class="roster-status status-pending">Camp</span>
-        <div class="roster-note">"A scorer" — Tibbetts</div>
+        <div class="roster-name">Janiah Barker</div>
+        <span class="roster-status status-dtd">DTD</span>
+        <div class="roster-note">Day-to-day · monitor</div>
       </div>
+
+      <div class="section-divider teal">Aces — Returning Core (All Back)</div>
       <div class="roster-row">
-        <div class="roster-pos">F</div>
-        <div class="roster-name">Yarden Garzon</div>
-        <span class="roster-status status-pending">Camp</span>
-        <div class="roster-note">Indiana Univ. · Israeli wing</div>
-      </div>
-      <div class="roster-row">
-        <div class="roster-pos">G</div>
-        <div class="roster-name">Shay Ciezki</div>
-        <span class="roster-status status-pending">Camp</span>
-        <div class="roster-note">Penn State · undrafted shooter</div>
+        <div class="roster-pos">C</div>
+        <div class="roster-name">A'ja Wilson</div>
+        <span class="roster-status status-starter">Starter</span>
+        <div class="roster-note">4× MVP · Historic supermax (Apr 15)</div>
       </div>
       <div class="roster-row">
         <div class="roster-pos">G</div>
-        <div class="roster-name">Kiana Williams</div>
-        <span class="roster-status status-pending">Camp</span>
-        <div class="roster-note">Vet PG depth</div>
+        <div class="roster-name">Jackie Young</div>
+        <span class="roster-status status-starter">Starter</span>
+        <div class="roster-note">Re-signed · All-Star caliber</div>
       </div>
+      <div class="roster-row">
+        <div class="roster-pos">G</div>
+        <div class="roster-name">Chelsea Gray</div>
+        <span class="roster-status status-starter">Starter</span>
+        <div class="roster-note">HOF-track floor general</div>
+      </div>
+      <div class="roster-row">
+        <div class="roster-pos">G</div>
+        <div class="roster-name">Jewell Loyd</div>
+        <span class="roster-status status-signed">Signed</span>
+        <div class="roster-note">Re-signed · perimeter threat</div>
+      </div>
+
+      <div class="section-note">Sources: <a href="https://www.espn.com/wnba/story/_/id/48705965" style="color:var(--mercury-teal);text-decoration:none;">ESPN Opening Day Rosters</a> · <a href="https://bleacherreport.com/articles/25257336-aja-wilson-aces-agree-reported-historic-supermax-contract-updated-roster-amid-wnba-free-agency" style="color:var(--mercury-teal);text-decoration:none;">Bleacher Report — Aces roster</a></div>
     </div>
   </div>
 </div>
@@ -982,68 +1197,109 @@ body {
   <button class="accordion-trigger" onclick="toggleAccordion('sec-4')">
     <div class="accordion-label">
       <span class="section-num">04</span>
-      <span class="section-title">Key Matchups</span>
+      <span class="section-title">🥊 Key Matchups</span>
     </div>
     <span class="accordion-arrow">▼</span>
   </button>
   <div class="accordion-content">
     <div class="section-body">
       <p class="insight-text">
-        Preseason caveat applies — rotations will be fluid and minutes split. But these are the chess pieces to watch when starters are on the floor together.
+        Five individual battles that will shape the outcome. Mercury need to win three of these five to stay competitive — particularly the first two.
       </p>
 
-      <div class="matchup-card">
-        <div class="matchup-title">Frontcourt Battle</div>
+      <div class="profile-card">
+        <div class="matchup-title">The Marquee Battle</div>
         <div class="vs-row">
           <div class="vs-side left">
             <div class="vs-name">Alyssa Thomas</div>
-            <div class="vs-meta">PHX · Forward · 12-yr vet</div>
+            <div class="vs-meta">PHX · PF · 12-yr vet<br>Every ESPN MVP ladder</div>
           </div>
           <div class="vs-divider">VS</div>
           <div class="vs-side right">
-            <div class="vs-name">Kamilla Cardoso</div>
-            <div class="vs-meta">CHI · Center · 6'7"</div>
+            <div class="vs-name">A'ja Wilson</div>
+            <div class="vs-meta">LV · C · 4× MVP<br>Historic supermax</div>
           </div>
         </div>
         <div class="matchup-note">
-          AT comes off her 2025 Finals run nursing a shoulder issue. Cardoso, with Reese gone, is now the unquestioned face of the Sky frontcourt. <strong>Watch how Phoenix matches up</strong> — Mack on Cardoso lets AT roam, but exposes Mack to PnR coverage.
+          Wilson holds an <strong>11-6 career regular-season edge</strong> over AT. Last regular-season meeting (Aug 15, 2025): Wilson 30 PTS / 16 REB vs AT's 15/9/6 in an 86-83 LV win. AT's DPOY-tier defense is Mercury's best hope at limiting Wilson's impact — but in space off the pick-and-roll, the mismatch advantage flips. Per <a href="https://www.sportskeeda.com/us/wnba/alyssa-thomas-vs-a-ja-wilson-closer-look-battles-mvp-rivals-ahead-2025-wnba-finals-duel" style="color:var(--mercury-teal);text-decoration:none;">Sportskeeda's H2H breakdown</a>.
         </div>
+        <div class="stat-watch">Watch: How often AT can avoid Wilson 1-on-1 in space · Wilson's FT rate</div>
       </div>
 
-      <div class="matchup-card">
-        <div class="matchup-title">Wing Scoring</div>
+      <div class="profile-card">
+        <div class="matchup-title">Wing Scoring Battle</div>
         <div class="vs-row">
           <div class="vs-side left">
             <div class="vs-name">Kahleah Copper</div>
-            <div class="vs-meta">PHX · Guard · ex-Sky · 2021 champ</div>
+            <div class="vs-meta">PHX · SF · 4× All-Star<br>13.2 PPG career vs LV</div>
           </div>
           <div class="vs-divider">VS</div>
           <div class="vs-side right">
-            <div class="vs-name">DiJonai Carrington</div>
-            <div class="vs-meta">CHI · Guard · 2024 MIP</div>
+            <div class="vs-name">Jackie Young</div>
+            <div class="vs-meta">LV · G · All-Star<br>Brilliant Finals run in 2025</div>
           </div>
         </div>
         <div class="matchup-note">
-          <strong>Storyline matchup.</strong> Copper won her 2021 title in Chicago. Carrington was the 2024 WNBA Most Improved Player on Connecticut and is one of the league's top perimeter defenders. <strong>Caveat:</strong> with rotations split, the two may not share extended floor time tonight — but it's the regular-season preview matchup if it happens.
+          Copper has <strong>two 37-point games</strong> on her career ledger vs the Aces — one with PHX in May 2024 and one with CHI in July 2023. In three 2024 regular-season games vs Vegas with PHX: 19, 37, 18. She carries offenses against this group when she's locked in. Young is one of the league's best two-way wings and will contest every attempt. Per <a href="https://www.statmuse.com/wnba/ask/kahleah-copper-vs-las-vegas-aces" style="color:var(--mercury-teal);text-decoration:none;">StatMuse career data</a>.
         </div>
+        <div class="stat-watch">Watch: Copper's 3PT volume — she shot 4-of-6 from deep in preseason opener</div>
       </div>
 
-      <div class="matchup-card">
-        <div class="matchup-title">Point Guard Pace</div>
+      <div class="profile-card">
+        <div class="matchup-title">Point Guard Duel</div>
         <div class="vs-row">
           <div class="vs-side left">
-            <div class="vs-name">M. Akoa Makani</div>
-            <div class="vs-meta">PHX · Year 2 · breakout candidate</div>
+            <div class="vs-name">Monique Akoa Makani</div>
+            <div class="vs-meta">PHX · PG · Year 2<br>2025 breakout candidate</div>
           </div>
           <div class="vs-divider">VS</div>
           <div class="vs-side right">
-            <div class="vs-name">Skylar Diggins</div>
-            <div class="vs-meta">CHI · multi-yr deal · veteran PG</div>
+            <div class="vs-name">Chelsea Gray</div>
+            <div class="vs-meta">LV · G · HOF-track<br>PnR mastermind</div>
           </div>
         </div>
         <div class="matchup-note">
-          Diggins anchors Chicago's rebuild as the lead ball-handler. Akoa Makani earned trust late last season; this matchup will tell us whether Phoenix's PG room can hold up against a top-tier vet — assuming Diggins gets extended starter minutes in a preseason setting.
+          Gray is a franchise-tier floor general — her late-clock shotmaking and pick-and-roll orchestration are historically elite. Akoa Makani is in just her second WNBA season. This is the biggest experience gap on the floor tonight. Mercury need her to limit live-ball turnovers; every giveaway to Gray turns into Aces transition.
         </div>
+        <div class="stat-watch">Watch: PHX turnover count — Vegas converts turnovers to 8+ fast-break pts per game</div>
+      </div>
+
+      <div class="profile-card">
+        <div class="matchup-title">Perimeter Depth</div>
+        <div class="vs-row">
+          <div class="vs-side left">
+            <div class="vs-name">Sami Whitcomb</div>
+            <div class="vs-meta">PHX · SG · 9-yr vet<br>Floor spacer · shooter</div>
+          </div>
+          <div class="vs-divider">VS</div>
+          <div class="vs-side right">
+            <div class="vs-name">Jewell Loyd</div>
+            <div class="vs-meta">LV · G · Re-signed<br>Perimeter threat · scorer</div>
+          </div>
+        </div>
+        <div class="matchup-note">
+          Whitcomb is Mercury's designated floor-spacer — her movement off the ball and corner three shooting create necessary spacing for AT and Copper to operate. Loyd is a multi-faceted scoring threat who can go off in bunches. The off-ball battle here shapes Phoenix's spacing scheme for the entire game.
+        </div>
+        <div class="stat-watch">Watch: 3PT differential — PHX needs to win this category to stay competitive</div>
+      </div>
+
+      <div class="profile-card">
+        <div class="matchup-title">Paint Presence & Foul Management</div>
+        <div class="vs-row">
+          <div class="vs-side left">
+            <div class="vs-name">Mack / Linskens</div>
+            <div class="vs-meta">PHX · C/PF tandem<br>Mobile + sizeable</div>
+          </div>
+          <div class="vs-divider">VS</div>
+          <div class="vs-side right">
+            <div class="vs-name">A'ja Wilson</div>
+            <div class="vs-meta">LV · C · MVP<br>Draws fouls at elite rate</div>
+          </div>
+        </div>
+        <div class="matchup-note">
+          Mack provides lateral mobility; <strong>Linskens (6'5" Belgian)</strong> provides backup rim protection. They'll absorb Wilson in rotation, with AT helping as the primary stopper. <strong>Foul management is the key</strong> — Mercury cannot afford to put Wilson on the free-throw line in the fourth quarter of a close game. With AT, they have the length to make Wilson work — but they must stay disciplined.
+        </div>
+        <div class="stat-watch">Watch: Wilson's FT rate + paint points allowed — the control variable for this game</div>
       </div>
     </div>
   </div>
@@ -1054,7 +1310,7 @@ body {
   <button class="accordion-trigger" onclick="toggleAccordion('sec-5')">
     <div class="accordion-label">
       <span class="section-num">05</span>
-      <span class="section-title">Storylines</span>
+      <span class="section-title">🔥 Storylines</span>
     </div>
     <span class="accordion-arrow">▼</span>
   </button>
@@ -1062,119 +1318,232 @@ body {
     <div class="section-body">
 
       <div class="storyline">
-        <div class="storyline-title">A Homecoming for Tibbetts</div>
+        <div class="storyline-title">Finals Rematch — First Game Since the Sweep</div>
         <div class="storyline-text">
-          South Dakota native Nate Tibbetts brings the Mercury home for the <span class="teal">first WNBA game ever played in the state</span>. Assistant Megan Vogel also has SD ties. The Sanford Pentagon is in Sioux Falls and has hosted top-level NCAA events but never a WNBA game — until tonight. Players and coaches also ran a <span class="orange">youth basketball clinic</span> for grades 3-8 at the Pentagon on Friday Apr 24 — registration filled to its 150-athlete cap.
+          The last time these teams played, <span class="orange">A'ja Wilson hoisted her third championship trophy</span> and the Aces swept the Mercury 4-0. The closest result was a <span class="teal">90-88 Game 3 buzzer-beater</span> — Wilson's step-back jumper with 0.3 seconds remaining sent Phoenix to the brink of elimination. Tonight is the Mercury's first chance to write a new chapter in this rivalry. The Aces raised their banner. Mercury answers by showing up to their house on opening day, on ABC, in front of a national audience. Per <a href="https://www.thesportingtribune.com/2025/10/08/wilson-buzzer-beater-has-aces-on-the-brink" style="color:var(--mercury-teal);text-decoration:none;">The Sporting Tribune</a> and <a href="https://www.si.com/wnba/wnba-2025-playoffs-finals-draws-in-historic-ratings" style="color:var(--mercury-teal);text-decoration:none;">SI Finals coverage</a>.
         </div>
+        <div class="storyline-source">Game 3 Q-by-Q: LV 26-29-21-14, PHX 23-20-16-29 — Mercury made a 14-pt Q4 push but ran out of time</div>
       </div>
 
       <div class="storyline">
-        <div class="storyline-title">Copper Faces Her First Franchise</div>
+        <div class="storyline-title">Tibbetts Says National Media Has It Wrong</div>
         <div class="storyline-text">
-          Kahleah Copper played seven seasons in Chicago and won the <span class="orange">2021 WNBA title</span> there. She's now a 4× All-Star centerpiece for Phoenix. Even in preseason, this is a meaningful first encounter against the franchise that built her — now without Reese, but with Diggins and Carrington as the new face.
+          Coach Nate Tibbetts didn't mince words at May 6 Media Day. He explicitly called out the national media for placing Mercury 7th in the Western Conference: <span class="orange">"When we look in the mirror, we don't see that."</span> He added that their expectations are "always gonna be bigger than what the national media thinks" and that "no one expected us to be there last year" — yet they made the Finals. Mercury arrive in Vegas carrying that chip. Per <a href="https://www.yardbarker.com/wnba/articles/mercurys_nate_tibbetts_takes_issue_with_outside_expectations_for_2026_season/s1_17704_43814835" style="color:var(--mercury-teal);text-decoration:none;">Yardbarker / ClutchPoints, May 6, 2026</a>.
         </div>
+        <div class="storyline-source">CBS expert panel: 3 of 4 have Mercury 8th in West — Tibbetts has seen the projections</div>
       </div>
 
       <div class="storyline">
-        <div class="storyline-title">Sky Without Reese — A Reset</div>
+        <div class="storyline-title">Without Sabally, With Ayayi — A New Equation</div>
         <div class="storyline-text">
-          Chicago shocked the league on April 6 by trading <span class="teal">Angel Reese to Atlanta</span> for two future first-rounders. The Sky pivoted hard — adding Diggins, Carrington, Jacy Sheldon, and Azurá Stevens. <span class="orange">Year 2 under HC Tyler Marsh</span> with a near-total roster reset around Cardoso.
-          </div>
+          Satou Sabally, <span class="orange">Mercury's 2025 leading scorer at 16.3 PPG</span>, signed with the New York Liberty — now the championship odds favorites at +220. Phoenix did not replace her like-for-like. Instead, GM Nick U'Ren brought in <span class="teal">Valériane Ayayi</span>, a 31-year-old French international forward who started for France vs Team USA at the Paris Olympics and was AT's EuroLeague teammate at USK Praha. The chemistry is already there. The question is whether Ayayi's defensive versatility and off-ball movement can compensate for Sabally's volume scoring. Per <a href="https://www.theixsports.com/features/2026-wnba-season-preview-phoenix-mercury/" style="color:var(--mercury-teal);text-decoration:none;">The IX Basketball's Mercury preview</a> and <a href="https://herhoopstats.substack.com/p/2026-wnba-opening-day-roster-breakdowns-part-two" style="color:var(--mercury-teal);text-decoration:none;">Her Hoop Stats</a>.
+        </div>
+        <div class="storyline-source">Sabally → Liberty, now title favorites at +220 · PHX bet on system over star replacement</div>
       </div>
 
       <div class="storyline">
-        <div class="storyline-title">The Sabally Hangover</div>
+        <div class="storyline-title">Aces Ran It Back — Supermax Season for A'ja</div>
         <div class="storyline-text">
-          Sabally averaged <span class="teal">19.0 PPG / 7.0 RPG</span> in the 2025 playoffs before a Game 3 concussion ended her Finals. She signed with NY on Apr 11. Phoenix did not sign a like-for-like replacement — they're betting depth, continuity, and Tibbetts' system can absorb the loss.
+          Las Vegas didn't just win last year — they returned every key piece. Wilson signed a <span class="teal">historic supermax on April 15</span>. Young, Gray, and Loyd all came back. Bench depth got a potential <span class="orange">6th Woman of the Year candidate in Chennedy Carter</span> (per ESPN projection). Becky Hammon enters Year 5. Tonight doubles as their ring ceremony and championship banner raising. It is, in every way, the Aces' coronation night — and Mercury is the opponent they chose to share it with. Per <a href="https://bleacherreport.com/articles/25257336-aja-wilson-aces-agree-reported-historic-supermax-contract-updated-roster-amid-wnba-free-agency" style="color:var(--mercury-teal);text-decoration:none;">Bleacher Report's Aces supermax report</a>.
         </div>
+        <div class="storyline-source">ESPN BPI: Aces projected 28.6 wins · 98.2% playoff probability · #1 power ranking</div>
       </div>
 
       <div class="storyline">
-        <div class="storyline-title">A New CBA, A Compressed Camp</div>
+        <div class="storyline-title">Copper's Career Numbers vs Vegas Hint at Upside</div>
         <div class="storyline-text">
-          The new WNBA collective bargaining agreement compressed free agency and the draft into a sprint. Phoenix held back early before announcing a wave of re-signings on April 12. Camp opened April 19 — <span class="teal">one of the shortest runways in WNBA history</span> heading into May 9 opener at Vegas.
+          Kahleah Copper has averaged <span class="teal">13.2 PPG against the Aces</span> over 25 career games — with <span class="orange">two 37-point performances</span> on her ledger (one with PHX in May 2024, one with Chicago in July 2023). Cold stretches are in the data too, but she has carried offenses against this group in the biggest moments. In three 2024 regular-season games vs Vegas wearing Mercury: 19, 37, 18. If she gets it going early, this game becomes a different conversation than the 7.5-point spread suggests. Per <a href="https://www.statmuse.com/wnba/ask/kahleah-copper-vs-las-vegas-aces" style="color:var(--mercury-teal);text-decoration:none;">StatMuse career splits</a>.
         </div>
+        <div class="storyline-source">45.6% FG, 34.0% 3P, 80.7% FT vs LV career — she's a proven producer against them</div>
       </div>
 
     </div>
   </div>
 </div>
 
-<!-- ═══ SECTION 6: COACHING & FRONT OFFICE ═══ -->
+<!-- ═══ SECTION 6: VOICES ═══ -->
 <div class="accordion-item" id="sec-6">
   <button class="accordion-trigger" onclick="toggleAccordion('sec-6')">
     <div class="accordion-label">
       <span class="section-num">06</span>
-      <span class="section-title">Voices · Coaching & Front Office</span>
+      <span class="section-title">🎙 Voices · Tibbetts &amp; Copper Media Day</span>
     </div>
     <span class="accordion-arrow">▼</span>
   </button>
   <div class="accordion-content">
     <div class="section-body">
 
+      <div class="section-divider teal">Nate Tibbetts — Head Coach (Media Day, May 6, 2026)</div>
+
       <div class="quote-block">
-        <div class="quote-text">"You have to lean into who you are. Anytime you have a team with Alyssa Thomas on it, you're going to be an elite-level defensive team. You're going to compete every night. And then offensively, with the things that have happened this offseason, we're going to have to get into some more movement stuff offensively, playing to the second, third side."</div>
-        <div class="quote-attr">— Nate Tibbetts, head coach (Apr 19, 2026)</div>
+        <div class="quote-text">"Our expectation, I think, is always gonna be bigger than what the national media thinks."</div>
+        <div class="quote-attr">— Nate Tibbetts, on national-media expectations · May 6, 2026 · <a href="https://www.yardbarker.com/wnba/articles/mercurys_nate_tibbetts_takes_issue_with_outside_expectations_for_2026_season/s1_17704_43814835" style="color:var(--mercury-teal);text-decoration:none;">Yardbarker / ClutchPoints</a></div>
       </div>
 
       <div class="quote-block">
-        <div class="quote-text">"Last season I think it was just Kahleah and Jackie that were the two returners. Now there's about seven returners on this team… we're definitely farther ahead than we were last year at this time just because we kind of know each other."</div>
-        <div class="quote-attr">— Nate Tibbetts on continuity (Apr 21, 2026)</div>
-      </div>
-
-      <div class="quote-block">
-        <div class="quote-text">"Where Mac has come from two years ago to now… she's probably gained 10 to 15 pounds of muscle this offseason. Part of the reason why at times we haven't played her as much as we needed to is because of her conditioning. She's in a lot better shape."</div>
-        <div class="quote-attr">— Tibbetts on Natasha Mack</div>
+        <div class="quote-text">"No one expected us to be there last year."</div>
+        <div class="quote-attr">— Tibbetts, on the 2025 Finals run · May 6, 2026 · <a href="https://www.yardbarker.com/wnba/articles/mercurys_nate_tibbetts_takes_issue_with_outside_expectations_for_2026_season/s1_17704_43814835" style="color:var(--mercury-teal);text-decoration:none;">Yardbarker / ClutchPoints</a></div>
       </div>
 
       <div class="quote-block orange-quote">
-        <div class="quote-text">"Establishing that sort of pipeline of [international] talent is something we didn't have in years past. So we're very excited."</div>
-        <div class="quote-attr">— Nick U'Ren, GM (Apr 12, 2026)</div>
+        <div class="quote-text">"I saw this morning that some national media picked us to be the 7th best team in our league. When we look in the mirror, we don't see that."</div>
+        <div class="quote-attr">— Tibbetts, on the seeding projections · Media Day, May 6, 2026 · <a href="https://www.yardbarker.com/wnba/articles/mercurys_nate_tibbetts_takes_issue_with_outside_expectations_for_2026_season/s1_17704_43814835" style="color:var(--mercury-teal);text-decoration:none;">Yardbarker / ClutchPoints</a></div>
       </div>
 
       <div class="quote-block">
-        <div class="quote-text">"I don't think anyone [overseas] will be back for Saturday's game… we got to focus on who's here. When those players come back, they'll be ready."</div>
-        <div class="quote-attr">— Tibbetts on availability (Apr 21 media avail)</div>
+        <div class="quote-text">"They [the Japanese squad] went into Vegas the other night and competed at a high level, and I expect our group to come out and compete tonight."</div>
+        <div class="quote-attr">— Tibbetts, after the Apr 29 preseason win vs Japan (Japan had played the Aces days prior) · <a href="https://www.yardbarker.com/wnba/articles/a_historic_preseason_ends_as_the_phoenix_mercury_look_for_redemption_in_2026/s1_17087_43789064" style="color:var(--mercury-teal);text-decoration:none;">Yardbarker, Apr 30</a></div>
       </div>
+
+      <div class="section-divider teal">Kahleah Copper — Star Forward (Media Day, May 6, 2026)</div>
+
+      <div class="quote-block">
+        <div class="quote-text">"We were glad to bring back six. That's important for our chemistry and for our continuity, and then just our additions."</div>
+        <div class="quote-attr">— Kahleah Copper, on continuity · May 6, 2026 · <a href="https://www.yardbarker.com/wnba/articles/mercurys_nate_tibbetts_takes_issue_with_outside_expectations_for_2026_season/s1_17704_43814835" style="color:var(--mercury-teal);text-decoration:none;">Yardbarker / ClutchPoints</a></div>
+      </div>
+
+      <div class="quote-block">
+        <div class="quote-text">"We've just grown to trust the front office. They bring in players, and we just trust it."</div>
+        <div class="quote-attr">— Copper, on the front office · May 6, 2026 · <a href="https://www.yardbarker.com/wnba/articles/mercurys_nate_tibbetts_takes_issue_with_outside_expectations_for_2026_season/s1_17704_43814835" style="color:var(--mercury-teal);text-decoration:none;">Yardbarker / ClutchPoints</a></div>
+      </div>
+
     </div>
   </div>
 </div>
 
-<!-- ═══ SECTION 7: UPCOMING CALENDAR ═══ -->
+<!-- ═══ SECTION 7: BETTING & NATIONAL OUTLOOK ═══ -->
 <div class="accordion-item" id="sec-7">
   <button class="accordion-trigger" onclick="toggleAccordion('sec-7')">
     <div class="accordion-label">
       <span class="section-num">07</span>
-      <span class="section-title">What's Next</span>
+      <span class="section-title">📊 Betting &amp; National Outlook</span>
     </div>
     <span class="accordion-arrow">▼</span>
   </button>
   <div class="accordion-content">
     <div class="section-body">
 
-      <div class="calendar-item">
-        <div class="cal-date">
-          <div class="cal-month">Apr</div>
-          <div class="cal-day">25</div>
+      <div class="section-divider teal">Game Line (Consensus — BetMGM / Action Network / FOX)</div>
+      <div class="bet-grid">
+        <div class="bet-cell">
+          <div class="bet-label">Spread</div>
+          <div class="bet-value">PHX +7.5</div>
+          <div class="bet-sub">Aces -7.5 (-110)</div>
         </div>
-        <div class="cal-info">
-          <div class="cal-event">Mercury vs Chicago Sky · Preseason</div>
-          <div class="cal-detail">Sanford Pentagon, Sioux Falls SD · 4:00 PM ET</div>
-          <span class="cal-badge cal-tipoff">Tonight</span>
+        <div class="bet-cell">
+          <div class="bet-label">Total</div>
+          <div class="bet-value">166.5 – 167.5</div>
+          <div class="bet-sub">Slight book variance</div>
+        </div>
+        <div class="bet-cell">
+          <div class="bet-label">Moneyline (Aces)</div>
+          <div class="bet-value">-410</div>
+          <div class="bet-sub">Heavy favorite</div>
+        </div>
+        <div class="bet-cell">
+          <div class="bet-label">Moneyline (Mercury)</div>
+          <div class="bet-value">+330</div>
+          <div class="bet-sub">Road underdog</div>
+        </div>
+        <div class="bet-cell" style="grid-column:1/-1;">
+          <div class="bet-label">Books</div>
+          <div class="bet-value">BetMGM · Action Network · FOX Sports consensus</div>
+          <div class="bet-sub"><a href="https://sports.betmgm.com/en/blog/wnba/mercury-vs-aces-prediction-may-9-2026-bm23/" style="color:var(--mercury-teal);text-decoration:none;">BetMGM</a> · <a href="https://www.actionnetwork.com/wnba-game/phoenix-mercury-las-vegas-aces/285747" style="color:var(--mercury-teal);text-decoration:none;">Action Network</a> · <a href="https://www.foxsports.com/articles/wnba/las-vegas-hosts-phoenix-for-season-opener" style="color:var(--mercury-teal);text-decoration:none;">FOX Sports</a></div>
         </div>
       </div>
 
-      <div class="calendar-item">
-        <div class="cal-date">
-          <div class="cal-month">Apr</div>
-          <div class="cal-day">29</div>
+      <div class="section-divider teal">National Outlook</div>
+      <div class="bet-grid">
+        <div class="outlook-cell" style="grid-column:1/-1;">
+          <div class="outlook-label">ESPN Power Rank</div>
+          <div class="outlook-value">#1 — Las Vegas Aces</div>
+          <div class="outlook-sub">BPI: 98.2% playoff probability · 28.6 projected wins · <a href="https://www.espn.com/wnba/story/_/id/48657250" style="color:var(--mercury-teal);text-decoration:none;">ESPN 2026 Preview</a></div>
         </div>
-        <div class="cal-info">
-          <div class="cal-event">Mercury vs Japan National Team · Preseason</div>
-          <div class="cal-detail">Mountain America Center, Phoenix · International friendly</div>
-          <span class="cal-badge cal-mercury">Mercury</span>
+        <div class="outlook-cell" style="grid-column:1/-1;">
+          <div class="outlook-label">Title Odds (Covers.com)</div>
+          <div class="outlook-value">Liberty +220 · Aces +425 · Fever +450 · Dream +600 · Lynx +850</div>
+          <div class="outlook-sub"><strong style="color:var(--mercury-orange);">Mercury +2500 (8th)</strong> · <a href="https://www.covers.com/wnba/wnba-championship-odds" style="color:var(--mercury-teal);text-decoration:none;">Covers.com</a></div>
+        </div>
+        <div class="outlook-cell" style="grid-column:1/-1;">
+          <div class="outlook-label">CBS Expert Panel — Mercury West Seeding</div>
+          <div class="outlook-value">Erica Ayala: 8th · Isabel Gonzalez: 8th · Jack Maloney: 8th</div>
+          <div class="outlook-sub">Lindsay Gibbs: Not in top 8 (down year) — 3 of 4 have Mercury 8th · <a href="https://www.cbssports.com/wnba/news/2026-wnba-standings-predictions-expert-picks/" style="color:var(--mercury-teal);text-decoration:none;">CBS Sports</a></div>
+        </div>
+        <div class="outlook-cell" style="grid-column:1/-1;">
+          <div class="outlook-label">MVP Predictions</div>
+          <div class="outlook-value">Alyssa Thomas on every ESPN panelist's MVP ladder</div>
+          <div class="outlook-sub"><a href="https://www.espn.com/wnba/story/_/id/48705253" style="color:var(--mercury-teal);text-decoration:none;">ESPN 2026 Predictions</a> — AT the consensus inside dark horse</div>
         </div>
       </div>
+
+      <div class="section-note">Ownership read: The market says Vegas — and the market is probably right. But Mercury are 2-0 in preseason, returning 6, and Tibbetts has already guaranteed he's not accepting this role. The +7.5 is not a ceiling — it's a starting point.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 8: HOW TO WATCH ═══ -->
+<div class="accordion-item" id="sec-8">
+  <button class="accordion-trigger" onclick="toggleAccordion('sec-8')">
+    <div class="accordion-label">
+      <span class="section-num">08</span>
+      <span class="section-title">📺 How to Watch</span>
+    </div>
+    <span class="accordion-arrow">▼</span>
+  </button>
+  <div class="accordion-content">
+    <div class="section-body">
+
+      <div class="watch-grid">
+        <div class="watch-cell">
+          <div class="watch-label">Date</div>
+          <div class="watch-value">Saturday, May 9, 2026</div>
+          <div class="watch-sub">Regular Season Game 1</div>
+        </div>
+        <div class="watch-cell">
+          <div class="watch-label">Tip-Off</div>
+          <div class="watch-value">3:30 PM ET</div>
+          <div class="watch-sub">12:30 PM PT · 2:30 PM CT</div>
+        </div>
+        <div class="watch-cell">
+          <div class="watch-label">Venue</div>
+          <div class="watch-value">T-Mobile Arena</div>
+          <div class="watch-sub">Las Vegas, NV · Aces home</div>
+        </div>
+        <div class="watch-cell">
+          <div class="watch-label">Broadcast</div>
+          <div class="watch-value">ABC — National</div>
+          <div class="watch-sub">Mercury's first 2026 national broadcast</div>
+        </div>
+        <div class="watch-cell" style="grid-column:1/-1;">
+          <div class="watch-label">Doubleheader Context</div>
+          <div class="watch-value">Wings @ Fever 1:00 PM ET (Clark, Bueckers, Boston, Fudd) → PHX @ LV 3:30 PM ET</div>
+          <div class="watch-sub">ABC national doubleheader — marquee season-opening window · <a href="https://www.oursportscentral.com/services/releases/phoenix-mercury-set-2026-national-broadcast-schedule/n-6352056" style="color:var(--mercury-teal);text-decoration:none;">Mercury 2026 Broadcast Schedule</a></div>
+        </div>
+        <div class="watch-cell" style="grid-column:1/-1;">
+          <div class="watch-label">Ring Ceremony</div>
+          <div class="watch-value">Aces 2025 Championship Banner Raising</div>
+          <div class="watch-sub">Pre-game ceremony at T-Mobile Arena — Mercury has to watch, then play</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 9: WHAT'S NEXT ═══ -->
+<div class="accordion-item" id="sec-9">
+  <button class="accordion-trigger" onclick="toggleAccordion('sec-9')">
+    <div class="accordion-label">
+      <span class="section-num">09</span>
+      <span class="section-title">🏀 What's Next</span>
+    </div>
+    <span class="accordion-arrow">▼</span>
+  </button>
+  <div class="accordion-content">
+    <div class="section-body">
+      <p class="insight-text">
+        After the Vegas opener, Phoenix pivots to their <span class="highlight">regular-season home opener May 15 vs Chicago</span> at Mortgage Matchup Center. Per <a href="https://www.oursportscentral.com/services/releases/phoenix-mercury-set-2026-national-broadcast-schedule/n-6352056" style="color:var(--mercury-teal);text-decoration:none;">Mercury 2026 National Broadcast Schedule</a>.
+      </p>
 
       <div class="calendar-item">
         <div class="cal-date">
@@ -1182,33 +1551,9 @@ body {
           <div class="cal-day">9</div>
         </div>
         <div class="cal-info">
-          <div class="cal-event">Mercury @ Las Vegas · Regular Season Opener</div>
-          <div class="cal-detail">T-Mobile Arena · 3:30 PM ET (ABC)</div>
-          <span class="cal-badge cal-tipoff">Season Tip</span>
-        </div>
-      </div>
-
-      <div class="calendar-item">
-        <div class="cal-date">
-          <div class="cal-month">May</div>
-          <div class="cal-day">10</div>
-        </div>
-        <div class="cal-info">
-          <div class="cal-event">Mercury @ Golden State · Expansion debut</div>
-          <div class="cal-detail">Chase Center · 8:30 PM ET</div>
-          <span class="cal-badge cal-league">League</span>
-        </div>
-      </div>
-
-      <div class="calendar-item">
-        <div class="cal-date">
-          <div class="cal-month">May</div>
-          <div class="cal-day">12</div>
-        </div>
-        <div class="cal-info">
-          <div class="cal-event">Mercury vs Minnesota · Home Opener</div>
-          <div class="cal-detail">Mortgage Matchup Center · 10:00 PM ET</div>
-          <span class="cal-badge cal-mercury">Home Opener</span>
+          <div class="cal-event">Mercury @ Las Vegas Aces</div>
+          <div class="cal-detail">T-Mobile Arena · 3:30 PM ET · ABC</div>
+          <span class="cal-badge cal-tipoff">Tonight — Regular Season Opener</span>
         </div>
       </div>
 
@@ -1218,12 +1563,15 @@ body {
           <div class="cal-day">15</div>
         </div>
         <div class="cal-info">
-          <div class="cal-event">Mercury vs Chicago · Regular Season Rematch</div>
-          <div class="cal-detail">Mortgage Matchup Center · 10:00 PM ET</div>
-          <span class="cal-badge cal-mercury">Mercury</span>
+          <div class="cal-event">Mercury vs Chicago Sky</div>
+          <div class="cal-detail">Mortgage Matchup Center, Phoenix · 7:00 PM PT / 10:00 PM ET</div>
+          <span class="cal-badge cal-home">Home Opener · ION National</span>
         </div>
       </div>
 
+      <div class="section-note">
+        The Chicago rematch on May 15 is significant — PHX went 2-0 vs Chi in preseason (108-104 in Sioux Falls, convincing follow-up). The Sky no longer have Angel Reese (traded to Atlanta Apr 6 for two future firsts); their rebuild centers on Cardoso. Home opener crowd at Mortgage Matchup Center should be a statement night.
+      </div>
     </div>
   </div>
 </div>
@@ -1243,8 +1591,8 @@ body {
       <text x="94" y="53" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="400" font-size="7.8" fill="rgba(255,255,255,0.25)" letter-spacing="2.4">ACCELERATED VELOCITY CONSULTING</text>
     </svg>
   </div>
-  <div class="footer-message">Let's start the season strong, Mat.</div>
-  <div class="footer-timestamp">Generated Saturday, April 25, 2026</div>
+  <div class="footer-message">Get back what they took, Mat.</div>
+  <div class="footer-timestamp">Generated Saturday, May 9, 2026 · 9:05 AM EDT</div>
   <div class="footer-accent"></div>
 </div>
 
