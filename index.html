@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Mercury Pregame Intel · Lynx @ Phoenix · May 12, 2026</title>
+<title>Mercury Pregame Intel · Sky @ Phoenix · May 15, 2026</title>
 <meta name="theme-color" content="#08080e">
+<meta name="description" content="Phoenix Mercury ownership pregame intelligence for Chicago Sky at Phoenix Mercury, May 15, 2026.">
 
-<!-- Open Graph / iMessage Preview -->
-<meta property="og:title" content="Mercury Pregame Intel · Home Opener vs Lynx">
-<meta property="og:description" content="Mat — pregame brief for tonight's home opener. Mercury (1-1) host Lynx (0-1) · No Collier · PHX -4.5 · 7:00 PM MST · Mortgage Matchup Center.">
+<meta property="og:title" content="Mercury Pregame Intel · Sky @ Phoenix">
+<meta property="og:description" content="Mat - Chicago at Phoenix tonight. 7:00 PM MST · ION · Mortgage Matchup Center · verified pregame intelligence.">
 <meta property="og:image" content="https://meltckr.github.io/mercury-pregame-dashboard/og-image.jpg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://meltckr.github.io/mercury-pregame-dashboard/">
@@ -22,38 +22,31 @@
   --surface-3: #1f1f32;
   --border: #282840;
   --border-hover: #383858;
-
-  --text: #e6e6f2;
-  --text-muted: #8686a0;
-  --text-dim: #5a5a74;
-
+  --text: #eeeeff;
+  --text-muted: #aaaac4;
+  --text-dim: #73738f;
   --mercury-teal: #00b4a6;
-  --mercury-teal-glow: rgba(0, 180, 166, 0.12);
+  --mercury-teal-glow: rgba(0, 180, 166, 0.14);
   --mercury-orange: #e8601e;
-  --mercury-orange-glow: rgba(232, 96, 30, 0.12);
+  --mercury-orange-glow: rgba(232, 96, 30, 0.14);
   --mercury-purple: #2d1b69;
-  --mercury-purple-glow: rgba(45, 27, 105, 0.25);
-
+  --mercury-purple-glow: rgba(45, 27, 105, 0.28);
   --accent: var(--mercury-teal);
   --accent-glow: var(--mercury-teal-glow);
-
   --win: #22c55e;
   --loss: #ef4444;
   --gold: #f59e0b;
-  --blue: #3b82f6;
-  --purple: #8b5cf6;
-
-  --radius: 12px;
-  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-sm: 10px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-html, body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif; -webkit-font-smoothing: antialiased; }
+html, body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; text-size-adjust: 100%; }
 body { padding: max(env(safe-area-inset-top), 0px) max(env(safe-area-inset-right), 0px) max(env(safe-area-inset-bottom), 0px) max(env(safe-area-inset-left), 0px); }
+a { color: var(--mercury-teal); text-decoration: none; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--mercury-teal); outline-offset: 3px; }
+.container { max-width: 510px; margin: 0 auto; padding: 16px; }
 
-.container { max-width: 480px; margin: 0 auto; padding: 16px; }
-
-/* Header */
 .header {
   position: relative;
   border-radius: var(--radius);
@@ -65,96 +58,87 @@ body { padding: max(env(safe-area-inset-top), 0px) max(env(safe-area-inset-right
   cursor: pointer;
 }
 .header::before {
-  content: ''; position: absolute; top: -40%; right: -20%;
-  width: 70%; height: 140%;
-  background: radial-gradient(circle, rgba(0, 180, 166, 0.18) 0%, transparent 60%);
+  content: ""; position: absolute; top: -40%; right: -20%;
+  width: 76%; height: 140%;
+  background: radial-gradient(circle, rgba(0, 180, 166, 0.22) 0%, transparent 60%);
   pointer-events: none;
 }
 .header::after {
-  content: ''; position: absolute; bottom: -40%; left: -20%;
+  content: ""; position: absolute; bottom: -40%; left: -20%;
   width: 70%; height: 140%;
-  background: radial-gradient(circle, rgba(45, 27, 105, 0.35) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(45, 27, 105, 0.42) 0%, transparent 60%);
   pointer-events: none;
 }
-.header-top { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.header-top { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; }
 .brand-tag {
-  font-size: 9.5px; letter-spacing: 2.2px; text-transform: uppercase;
-  color: var(--mercury-teal); font-weight: 700;
-  border: 1px solid rgba(0, 180, 166, 0.35);
-  padding: 5px 9px; border-radius: 4px;
+  font-size: 12px; letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--mercury-teal); font-weight: 800;
+  border: 1px solid rgba(0, 180, 166, 0.38);
+  padding: 6px 10px; border-radius: 6px;
   background: var(--mercury-teal-glow);
+  white-space: nowrap;
 }
 .header-title { position: relative; z-index: 1; }
-.h-eyebrow { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; }
-.h-title { font-size: 26px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.1; margin-bottom: 6px; }
-.h-sub { font-size: 14px; color: var(--text-muted); font-weight: 500; margin-bottom: 12px; }
+.h-eyebrow { font-size: 13px; letter-spacing: 2.2px; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 9px; }
+.h-title { font-size: 33px; font-weight: 850; letter-spacing: -0.9px; line-height: 1.06; margin-bottom: 8px; }
+.h-sub { font-size: 17px; color: var(--text-muted); font-weight: 600; line-height: 1.35; margin-bottom: 13px; }
 .h-badge {
   display: inline-block;
   background: linear-gradient(90deg, var(--mercury-teal), #0086a0);
   color: #001f1c;
-  font-size: 10.5px; letter-spacing: 1.8px; text-transform: uppercase; font-weight: 800;
-  padding: 6px 11px; border-radius: 4px;
+  font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; font-weight: 900;
+  padding: 7px 12px; border-radius: 6px;
 }
 
-/* Accordion */
 .accordion-item {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   overflow: hidden;
   transition: border-color 0.2s;
 }
 .accordion-item.open { border-color: var(--border-hover); }
 .accordion-header {
-  display: flex; align-items: center; gap: 12px;
-  padding: 16px 16px;
+  display: flex; align-items: center; gap: 13px;
+  min-height: 58px;
+  padding: 17px 16px;
   cursor: pointer;
   user-select: none;
 }
 .section-num {
-  width: 26px; height: 26px;
+  width: 30px; height: 30px;
   background: var(--mercury-teal);
   color: #001f1c;
-  font-weight: 800; font-size: 13px;
+  font-weight: 900; font-size: 15px;
   display: flex; align-items: center; justify-content: center;
-  border-radius: 6px;
+  border-radius: 8px;
   flex-shrink: 0;
 }
-.section-title { flex: 1; font-size: 15px; font-weight: 700; letter-spacing: -0.2px; }
-.chevron {
-  width: 18px; height: 18px;
-  color: var(--text-muted);
-  transition: transform 0.25s;
-  flex-shrink: 0;
-}
+.section-title { flex: 1; font-size: 18px; font-weight: 800; letter-spacing: -0.25px; }
+.chevron { width: 20px; height: 20px; color: var(--text-muted); transition: transform 0.25s; flex-shrink: 0; }
 .accordion-item.open .chevron { transform: rotate(180deg); color: var(--mercury-teal); }
-.accordion-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease;
-}
-.accordion-item.open .accordion-body { max-height: 5000px; }
+.accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.accordion-item.open .accordion-body { max-height: 6200px; }
 .accordion-body-inner { padding: 4px 16px 18px; }
 
-/* Cards & content */
 .card {
   background: var(--surface-2);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 14px;
-  margin-bottom: 10px;
+  padding: 15px;
+  margin-bottom: 11px;
 }
 .card:last-child { margin-bottom: 0; }
-.card-label { font-size: 10px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 8px; }
-.card-text { font-size: 13.5px; line-height: 1.55; color: var(--text); }
-.card-text strong { color: var(--mercury-teal); font-weight: 700; }
-.card-text em { color: var(--mercury-orange); font-style: normal; font-weight: 600; }
+.card-label { font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--text-muted); font-weight: 800; margin-bottom: 8px; }
+.card-text { font-size: 16px; line-height: 1.55; color: var(--text); }
+.card-text strong { color: var(--mercury-teal); font-weight: 800; }
+.card-text em { color: var(--mercury-orange); font-style: normal; font-weight: 750; }
+.source-note { font-size: 13px; color: var(--text-dim); line-height: 1.45; margin-top: 8px; }
 
-/* Matchup card */
 .matchup-card {
-  background: linear-gradient(135deg, rgba(0, 180, 166, 0.06), rgba(45, 27, 105, 0.12));
-  border: 1px solid rgba(0, 180, 166, 0.25);
+  background: linear-gradient(135deg, rgba(0, 180, 166, 0.08), rgba(45, 27, 105, 0.14));
+  border: 1px solid rgba(0, 180, 166, 0.28);
   border-radius: var(--radius-sm);
   padding: 16px 14px;
   display: grid;
@@ -164,174 +148,132 @@ body { padding: max(env(safe-area-inset-top), 0px) max(env(safe-area-inset-right
   margin-bottom: 12px;
 }
 .matchup-team { text-align: center; }
-.matchup-team .name { font-size: 14px; font-weight: 800; letter-spacing: -0.2px; }
-.matchup-team .rec { font-size: 11px; color: var(--text-muted); margin-top: 3px; font-weight: 600; }
-.matchup-team .streak { font-size: 10px; margin-top: 4px; font-weight: 700; letter-spacing: 0.5px; }
+.matchup-team .name { font-size: 17px; font-weight: 900; letter-spacing: -0.25px; }
+.matchup-team .rec { font-size: 13px; color: var(--text-muted); margin-top: 4px; font-weight: 700; }
+.matchup-team .streak { font-size: 12px; margin-top: 4px; font-weight: 850; letter-spacing: 0.5px; }
 .streak-l { color: var(--loss); }
 .streak-w { color: var(--win); }
 .vs-pill {
-  font-size: 10px; font-weight: 800; letter-spacing: 1px;
+  font-size: 12px; font-weight: 900; letter-spacing: 0.9px;
   color: var(--mercury-teal);
   background: var(--mercury-teal-glow);
-  padding: 4px 8px; border-radius: 4px;
-  border: 1px solid rgba(0, 180, 166, 0.3);
+  padding: 5px 9px; border-radius: 5px;
+  border: 1px solid rgba(0, 180, 166, 0.32);
 }
 
-/* Stat row */
 .stat-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 9px 0;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+  padding: 11px 0;
   border-bottom: 1px solid var(--border);
-  font-size: 13px;
+  font-size: 15.5px;
 }
 .stat-row:last-child { border-bottom: none; }
-.stat-row .label { color: var(--text-muted); font-weight: 500; }
-.stat-row .value { color: var(--text); font-weight: 700; }
+.stat-row .label { color: var(--text-muted); font-weight: 600; }
+.stat-row .value { color: var(--text); font-weight: 850; text-align: right; }
 .stat-row .value.highlight { color: var(--mercury-teal); }
 .stat-row .value.warn { color: var(--mercury-orange); }
 
-/* Comparison */
 .comp-row {
-  display: grid; grid-template-columns: 1fr 80px 1fr;
+  display: grid; grid-template-columns: 1fr 86px 1fr;
   align-items: center; gap: 8px;
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 1px solid var(--border);
-  font-size: 13px;
+  font-size: 15px;
 }
 .comp-row:last-child { border-bottom: none; }
-.comp-row .label { text-align: center; font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
-.comp-row .min-val { text-align: right; font-weight: 700; }
-.comp-row .phx-val { text-align: left; font-weight: 700; }
-.comp-row .min-val.win, .comp-row .phx-val.win { color: var(--mercury-teal); }
+.comp-row .label { text-align: center; font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.9px; font-weight: 800; }
+.comp-row .chi-val { text-align: right; font-weight: 850; }
+.comp-row .phx-val { text-align: left; font-weight: 850; }
+.comp-row .win { color: var(--mercury-teal); }
 
-/* Bullet list */
 .bullet-list { list-style: none; padding: 0; margin: 0; }
 .bullet-list li {
   position: relative;
-  padding: 8px 0 8px 18px;
-  font-size: 13.5px;
-  line-height: 1.5;
+  padding: 10px 0 10px 19px;
+  font-size: 16px;
+  line-height: 1.52;
   border-bottom: 1px solid var(--border);
 }
 .bullet-list li:last-child { border-bottom: none; }
 .bullet-list li::before {
-  content: '';
+  content: "";
   position: absolute;
-  left: 2px; top: 14px;
-  width: 6px; height: 6px;
+  left: 2px; top: 18px;
+  width: 7px; height: 7px;
   background: var(--mercury-teal);
   border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 180, 166, 0.45);
 }
-.bullet-list li strong { color: var(--mercury-teal); font-weight: 700; }
-.bullet-list li em { color: var(--mercury-orange); font-style: normal; font-weight: 600; }
+.bullet-list strong { color: var(--mercury-teal); font-weight: 850; }
 
-/* Injury rows */
-.injury-row {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-}
-.injury-row:last-child { border-bottom: none; }
-.injury-name { font-size: 13.5px; font-weight: 700; }
-.injury-team { font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-top: 2px; }
-.injury-note { font-size: 11.5px; color: var(--text-muted); margin-top: 3px; max-width: 240px; line-height: 1.4; }
-.injury-status {
-  font-size: 10px; font-weight: 800; letter-spacing: 1px;
-  padding: 4px 8px; border-radius: 4px;
-  flex-shrink: 0; margin-left: 10px;
-}
-.status-out { background: rgba(239, 68, 68, 0.15); color: var(--loss); border: 1px solid rgba(239, 68, 68, 0.3); }
-.status-day { background: rgba(245, 158, 11, 0.15); color: var(--gold); border: 1px solid rgba(245, 158, 11, 0.3); }
-
-/* Matchup spotlight */
-.spotlight {
-  background: var(--surface-3);
-  border-left: 3px solid var(--mercury-teal);
-  padding: 12px 14px;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-.spotlight .head { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mercury-teal); font-weight: 700; margin-bottom: 6px; }
-.spotlight .body { font-size: 13px; line-height: 1.55; color: var(--text); }
-
-/* Betting */
-.bet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
-.bet-cell {
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 11px 10px;
-  text-align: center;
-}
-.bet-cell .label { font-size: 9.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 5px; }
-.bet-cell .value { font-size: 16px; font-weight: 800; color: var(--mercury-teal); }
-
-/* Calendar */
-.calendar-item {
-  display: flex; align-items: center; gap: 12px;
+.injury-row, .calendar-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
   padding: 11px 0;
   border-bottom: 1px solid var(--border);
 }
-.calendar-item:last-child { border-bottom: none; }
-.cal-date {
-  background: var(--mercury-teal-glow);
-  border: 1px solid rgba(0, 180, 166, 0.3);
-  border-radius: 6px;
-  padding: 6px 9px;
-  text-align: center;
-  min-width: 48px;
+.injury-row:last-child, .calendar-item:last-child { border-bottom: none; }
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  min-width: 58px;
+  justify-content: center;
+  height: 25px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
-.cal-date .mo { font-size: 9px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--mercury-teal); font-weight: 700; }
-.cal-date .day { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1; margin-top: 2px; }
-.cal-body { flex: 1; }
-.cal-opp { font-size: 13px; font-weight: 700; }
-.cal-meta { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.status-out { background: rgba(239, 68, 68, 0.14); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.32); }
+.status-check { background: rgba(245, 158, 11, 0.14); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.34); }
+.injury-name { font-size: 16px; font-weight: 850; }
+.injury-detail, .calendar-detail { font-size: 14px; color: var(--text-muted); line-height: 1.4; margin-top: 3px; }
+.calendar-date { font-size: 12px; font-weight: 900; color: var(--mercury-teal); letter-spacing: 1px; text-transform: uppercase; min-width: 70px; }
+.calendar-title { font-size: 16px; font-weight: 850; }
 
-/* Quote */
 .quote-block {
-  background: var(--surface-2);
-  border-left: 3px solid var(--mercury-teal);
-  padding: 12px 14px;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  font-size: 13px;
+  border: 1px solid rgba(0, 180, 166, 0.25);
+  background: rgba(0, 180, 166, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  font-size: 16px;
   line-height: 1.5;
-  font-style: italic;
   color: var(--text);
 }
-.quote-block .attr { display: block; margin-top: 8px; font-size: 11px; color: var(--text-muted); font-style: normal; font-weight: 600; letter-spacing: 0.5px; }
+.quote-block .who { display: block; margin-top: 8px; color: var(--text-muted); font-size: 13px; font-weight: 750; }
 
-/* Footer */
 .footer {
   text-align: center;
-  padding: 24px 16px 18px;
-  color: var(--text-muted);
+  padding: 24px 10px 30px;
+  color: var(--text-dim);
 }
-.footer-tagline { font-size: 13px; letter-spacing: 4px; font-weight: 800; color: var(--mercury-teal); margin-bottom: 14px; }
-.footer-message { font-size: 12px; color: var(--text-muted); margin: 12px 0 6px; font-style: italic; }
-.footer-ts { font-size: 10.5px; color: var(--text-dim); letter-spacing: 0.5px; }
+.dominate { font-size: 24px; font-weight: 900; letter-spacing: 2px; color: var(--mercury-teal); margin-bottom: 12px; }
+.footer-msg { font-size: 15px; color: var(--text-muted); margin: 12px 0 6px; }
+.timestamp { font-size: 12px; color: var(--text-dim); }
 .footer-accent {
   height: 3px;
   background: linear-gradient(90deg, var(--mercury-teal) 0%, var(--mercury-orange) 50%, var(--mercury-purple) 100%);
   margin-top: 20px;
   border-radius: 2px;
-  opacity: 0.6;
+  opacity: 0.75;
 }
 
-/* Responsive */
 @media (max-width: 380px) {
-  .h-title { font-size: 22px; }
   .container { padding: 12px; }
+  .h-title { font-size: 29px; }
+  .card-text, .bullet-list li { font-size: 15.5px; }
+  .section-title { font-size: 17px; }
 }
 </style>
 </head>
 <body>
 <div class="container">
-
-  <!-- HEADER -->
-  <div class="header">
+  <header class="header" aria-label="Dashboard header. Double tap to expand or collapse all sections.">
     <div class="header-top">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" width="170" height="32">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" width="170" height="32" aria-label="AVC">
         <circle cx="32" cy="32" r="30" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.2"/>
         <circle cx="32" cy="32" r="22" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45"/>
         <circle cx="32" cy="32" r="14" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.85"/>
@@ -341,361 +283,230 @@ body { padding: max(env(safe-area-inset-top), 0px) max(env(safe-area-inset-right
         <text x="94" y="38" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="800" font-size="28" fill="#ffffff" letter-spacing="-0.5">AVC</text>
         <text x="94" y="53" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="400" font-size="7.8" fill="rgba(255,255,255,0.55)" letter-spacing="2.4">ACCELERATED VELOCITY CONSULTING</text>
       </svg>
-      <span class="brand-tag">Ownership Intel</span>
+      <div class="brand-tag">Ownership Intelligence</div>
     </div>
     <div class="header-title">
-      <div class="h-eyebrow">Mercury Pregame · Game 3 · Home Opener</div>
-      <div class="h-title">Lynx @ Mercury</div>
-      <div class="h-sub">Tue, May 12 · 7:00 PM MST · Mortgage Matchup Center</div>
+      <div class="h-eyebrow">Phoenix Mercury · Pregame</div>
+      <h1 class="h-title">Sky @ Mercury</h1>
+      <div class="h-sub">Tonight · 7:00 PM MST · Mortgage Matchup Center · ION</div>
       <div class="h-badge">Pregame Intel</div>
     </div>
-  </div>
+  </header>
 
-  <!-- 1. EXECUTIVE SUMMARY -->
-  <div class="accordion-item open" id="acc1">
-    <div class="accordion-header" onclick="toggleAccordion('acc1')">
-      <div class="section-num">1</div>
-      <div class="section-title">Executive Summary</div>
-      <svg class="chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div>
-    <div class="accordion-body">
-      <div class="accordion-body-inner">
-
+  <main>
+    <section class="accordion-item open" id="section-1">
+      <div class="accordion-header" onclick="toggleAccordion('section-1')" role="button" tabindex="0">
+        <div class="section-num">1</div>
+        <div class="section-title">Executive Summary</div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="accordion-body"><div class="accordion-body-inner">
         <div class="matchup-card">
           <div class="matchup-team">
-            <div class="name">Minnesota</div>
-            <div class="rec">0-1</div>
-            <div class="streak streak-l">L1</div>
+            <div class="name">Chicago Sky</div>
+            <div class="rec">2-0 · 2-0 Away</div>
+            <div class="streak streak-w">W2</div>
           </div>
-          <div class="vs-pill">vs</div>
+          <div class="vs-pill">@</div>
           <div class="matchup-team">
-            <div class="name">Phoenix</div>
-            <div class="rec">1-1</div>
-            <div class="streak streak-l">L1</div>
+            <div class="name">Phoenix Mercury</div>
+            <div class="rec">1-2 · 0-1 Home</div>
+            <div class="streak streak-l">L2</div>
           </div>
         </div>
-
         <div class="card">
-          <div class="card-label">Bottom Line</div>
-          <div class="card-text">
-            Home opener at the rebranded <strong>Mortgage Matchup Center</strong>. Mercury split a brutal back-to-back: <strong>99-66 statement win at Las Vegas</strong> (largest road W in franchise history) then a flat <em>79-95 loss at Golden State</em>. Lynx arrive shorthanded — <strong>Napheesa Collier out</strong> with an ankle injury. This is a get-right game and a tone-setter for the home slate.
-          </div>
+          <div class="card-label">Bottom line</div>
+          <p class="card-text"><strong>Phoenix needs a clean-response game.</strong> The Mercury are back home after an 88-84 loss to Minnesota, while Chicago arrives unbeaten after holding Golden State to 29.3% shooting in a 69-63 win.</p>
+          <p class="source-note">Verified against <a href="https://www.espn.com/wnba/game/_/gameId/401856913/sky-mercury">ESPN Gamecast</a> and <a href="https://www.covers.com/sport/basketball/wnba/matchup/373865">Covers matchup page</a>.</p>
         </div>
-
         <div class="card">
-          <div class="card-label">The Edge</div>
+          <div class="card-label">Ownership lens</div>
+          <p class="card-text"><strong>Control the fourth and protect the ball.</strong> Covers noted Phoenix shot 31.6% in the fourth quarter against Minnesota. The cleanest swing is to turn Alyssa Thomas facilitation into paint-touch rhythm for Kahleah Copper and DeWanna Bonner without letting offensive chop leak into defensive energy.</p>
+          <p class="source-note">Fourth-quarter note from <a href="https://www.covers.com/sport/basketball/wnba/matchup/373865">Covers</a>.</p>
+        </div>
+        <div class="card">
+          <div class="card-label">Game facts</div>
+          <div class="stat-row"><span class="label">Tip</span><span class="value highlight">7:00 PM MST · 10:00 PM ET</span></div>
+          <div class="stat-row"><span class="label">Venue</span><span class="value">Mortgage Matchup Center</span></div>
+          <div class="stat-row"><span class="label">Broadcast</span><span class="value">ION</span></div>
+          <div class="stat-row"><span class="label">Market snapshot</span><span class="value warn">PHX favored · Covers: -4.5</span></div>
+          <p class="source-note">Schedule/broadcast cross-check: <a href="https://www.oursportscentral.com/services/releases/phoenix-mercury-set-2026-national-broadcast-schedule/n-6352056">Mercury national broadcast release</a>, <a href="https://www.cbssports.com/wnba/teams/PHO/phoenix-mercury/schedule/">CBS Sports schedule</a>, and <a href="https://www.espn.com/wnba/team/schedule/_/name/CHI/year/2026/seasontype/1/">ESPN Sky schedule</a>.</p>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="accordion-item" id="section-2">
+      <div class="accordion-header" onclick="toggleAccordion('section-2')" role="button" tabindex="0">
+        <div class="section-num">2</div>
+        <div class="section-title">Mercury Keys to the Game</div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="accordion-body"><div class="accordion-body-inner">
+        <div class="card">
           <ul class="bullet-list">
-            <li><strong>Collier out</strong> removes the reigning DPOY and MVP runner-up from Minnesota's frontcourt — a massive matchup swing.</li>
-            <li><strong>Alyssa Thomas</strong> opened her Mercury return with <strong>19 pts / 11 ast / 9 reb</strong> at Golden State — near triple-double on Day 1.</li>
-            <li>Vegas demolition showed the new-look frontcourt identity: <strong>Natasha Mack 15 reb</strong>, defense traveled.</li>
-            <li>Sportsbooks favor PHX <strong>-3.5 to -4.5</strong>, O/U <strong>168.5-170.5</strong>.</li>
+            <li><strong>Win the first six minutes.</strong> Chicago is 2-0 on a four-game road trip. Hit them early before their defense settles into half-court control.</li>
+            <li><strong>Keep Copper downhill.</strong> Copper posted 30 against Minnesota. Her pressure is the best answer to a Sky group that wants to force late-clock jumpers.</li>
+            <li><strong>Thomas as the organizer.</strong> ESPN lists Alyssa Thomas as Phoenix's assists leader at 9.3 per game. The offense should run through her decision-making, especially when Chicago loads to Copper.</li>
+            <li><strong>Defensive possession discipline.</strong> Chicago's current identity is defense first. Do not fuel them with live-ball turnovers or empty possessions that become runouts.</li>
           </ul>
+          <p class="source-note">Player-leader and team-record context from <a href="https://www.espn.com/wnba/game/_/gameId/401856913/sky-mercury">ESPN Gamecast</a>; Copper/Minnesota notes from <a href="https://www.covers.com/sport/basketball/wnba/matchup/373865">Covers</a>.</p>
         </div>
+      </div></div>
+    </section>
 
-        <div class="card">
-          <div class="card-label">Risk</div>
-          <div class="card-text">
-            Mercury committed <em>17 turnovers</em> at GSV (Thomas had 6) and were outscored 31-11 in Q2. Cleaning up the second-quarter lapses against a desperate 0-1 Lynx team — even without Collier — is non-negotiable.
-          </div>
-        </div>
-
+    <section class="accordion-item" id="section-3">
+      <div class="accordion-header" onclick="toggleAccordion('section-3')" role="button" tabindex="0">
+        <div class="section-num">3</div>
+        <div class="section-title">Injury Report</div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
-    </div>
-  </div>
-
-  <!-- 2. KEYS TO THE GAME -->
-  <div class="accordion-item" id="acc2">
-    <div class="accordion-header" onclick="toggleAccordion('acc2')">
-      <div class="section-num">2</div>
-      <div class="section-title">Mercury Keys to the Game</div>
-      <svg class="chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div>
-    <div class="accordion-body">
-      <div class="accordion-body-inner">
-
-        <div class="spotlight">
-          <div class="head">Key 1 · Protect the Ball</div>
-          <div class="body">17 TOs at GSV directly fueled a 21-6 Valkyries run. Against a Lynx team that thrives in transition, get the AT/TO ratio back under control.</div>
-        </div>
-
-        <div class="spotlight">
-          <div class="head">Key 2 · Exploit the Collier Void</div>
-          <div class="body">No Collier means no elite rim protection or top-end frontcourt scoring. <strong>Bonner, Thomas, and Mack</strong> should pound the paint and crash the offensive glass.</div>
-        </div>
-
-        <div class="spotlight">
-          <div class="head">Key 3 · Defend the Arc</div>
-          <div class="body">Lynx shot <strong>37.8% from 3</strong> last season (top-tier). Without Collier creating gravity inside, expect Reeve to lean on perimeter shooting. Close out hard.</div>
-        </div>
-
-        <div class="spotlight">
-          <div class="head">Key 4 · Set the Home Tone</div>
-          <div class="body">First game at Mortgage Matchup Center under the UWM banner. A double-digit win in front of the home crowd resets the season after the GSV loss.</div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- 3. INJURY REPORT -->
-  <div class="accordion-item" id="acc3">
-    <div class="accordion-header" onclick="toggleAccordion('acc3')">
-      <div class="section-num">3</div>
-      <div class="section-title">Injury Report</div>
-      <svg class="chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div>
-    <div class="accordion-body">
-      <div class="accordion-body-inner">
-
+      <div class="accordion-body"><div class="accordion-body-inner">
         <div class="card">
-          <div class="card-label">Mercury</div>
+          <div class="card-label">Verified source: Covers matchup page</div>
           <div class="injury-row">
-            <div>
-              <div class="injury-name">Sami Whitcomb</div>
-              <div class="injury-team">Guard</div>
-              <div class="injury-note">Knee · 4-6 weeks (per team, May 6)</div>
-            </div>
-            <div class="injury-status status-out">Out</div>
+            <span class="status-badge status-out">Out</span>
+            <div><div class="injury-name">Sami Whitcomb · Phoenix</div><div class="injury-detail">Knee. Listed as out, with a note that she will miss at least 4-6 weeks.</div></div>
           </div>
           <div class="injury-row">
-            <div>
-              <div class="injury-name">Valeriane Ayayi</div>
-              <div class="injury-team">Forward</div>
-              <div class="injury-note">Contract temporarily suspended — FIBA clearance</div>
-            </div>
-            <div class="injury-status status-out">Out</div>
+            <span class="status-badge status-out">Out</span>
+            <div><div class="injury-name">Monique Akoa Makani · Phoenix</div><div class="injury-detail">Not injury related. Contract temporarily suspended due to overseas commitment.</div></div>
           </div>
           <div class="injury-row">
-            <div>
-              <div class="injury-name">Monique Akoa Makani</div>
-              <div class="injury-team">Guard</div>
-              <div class="injury-note">Contract suspended — overseas commitment</div>
-            </div>
-            <div class="injury-status status-out">Out</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-label">Minnesota</div>
-          <div class="injury-row">
-            <div>
-              <div class="injury-name">Napheesa Collier</div>
-              <div class="injury-team">Forward · 2025 DPOY · MVP runner-up</div>
-              <div class="injury-note">Ankle — major absence for Lynx frontcourt</div>
-            </div>
-            <div class="injury-status status-out">Out</div>
+            <span class="status-badge status-out">Out</span>
+            <div><div class="injury-name">DiJonai Carrington · Chicago</div><div class="injury-detail">Foot. Listed without a timetable for return.</div></div>
           </div>
           <div class="injury-row">
-            <div>
-              <div class="injury-name">Dorka Juhasz</div>
-              <div class="injury-team">Forward</div>
-              <div class="injury-note">Foot injury</div>
-            </div>
-            <div class="injury-status status-out">Out</div>
+            <span class="status-badge status-check">Check</span>
+            <div><div class="injury-name">Final availability sweep</div><div class="injury-detail">ESPN's global injury page did not surface Phoenix/Chicago rows in the fetched view. Treat Covers as the working list, then re-check near tip.</div></div>
           </div>
+          <p class="source-note">Injury statuses from <a href="https://www.covers.com/sport/basketball/wnba/matchup/373865">Covers matchup page</a>; ESPN injury-page cross-check at <a href="https://www.espn.com/wnba/injuries">ESPN injuries</a>.</p>
         </div>
+      </div></div>
+    </section>
 
+    <section class="accordion-item" id="section-4">
+      <div class="accordion-header" onclick="toggleAccordion('section-4')" role="button" tabindex="0">
+        <div class="section-num">4</div>
+        <div class="section-title">Key Matchups</div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
-    </div>
-  </div>
-
-  <!-- 4. KEY MATCHUPS -->
-  <div class="accordion-item" id="acc4">
-    <div class="accordion-header" onclick="toggleAccordion('acc4')">
-      <div class="section-num">4</div>
-      <div class="section-title">Key Matchups</div>
-      <svg class="chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div>
-    <div class="accordion-body">
-      <div class="accordion-body-inner">
-
-        <div class="spotlight">
-          <div class="head">Alyssa Thomas vs Lynx Frontcourt</div>
-          <div class="body">AT returning to Phoenix produced <strong>19/11/9</strong> at GSV in her debut. With Collier sidelined, Thomas should have a clear path to a triple-double. Watch for her in pick-and-roll as the playmaker.</div>
+      <div class="accordion-body"><div class="accordion-body-inner">
+        <div class="card">
+          <div class="card-label">Copper pressure vs Sky shell</div>
+          <p class="card-text">Copper's 30-point night against Minnesota is the form signal. Chicago will test whether Phoenix can manufacture efficient looks when the first action is crowded.</p>
         </div>
-
-        <div class="spotlight">
-          <div class="head">Kahleah Copper vs Lynx Perimeter</div>
-          <div class="body">Copper's first home game as the franchise's offensive engine. Last season she averaged <strong>21.1 PPG</strong>. Expect Tibbetts to design the early possessions around her.</div>
+        <div class="card">
+          <div class="card-label">Thomas passing vs Chicago length</div>
+          <p class="card-text">Thomas is the pressure-release valve. If Chicago sits in gaps, Phoenix needs her touches at elbows and slots to punish help without forcing the ball sideways.</p>
         </div>
-
-        <div class="spotlight">
-          <div class="head">Natasha Mack vs Minnesota Bigs</div>
-          <div class="body">Mack had <strong>15 rebounds at Vegas</strong>, just 2 at GSV. The home crowd version of Mack — physical, vertical, rim-protecting — needs to show up against a Collier-less Minnesota.</div>
+        <div class="card">
+          <div class="card-label">Cardoso glass vs Mack physicality</div>
+          <p class="card-text">ESPN/Covers list Kamilla Cardoso as Chicago's rebounding leader at 10.5 per game, while Natasha Mack leads Phoenix at 9.0 per game. That possession battle is a real lever.</p>
+          <p class="source-note">Leader data from <a href="https://www.espn.com/wnba/game/_/gameId/401856913/sky-mercury">ESPN Gamecast</a> and <a href="https://www.covers.com/sport/basketball/wnba/teams/main/chicago-sky">Covers Chicago team page</a>.</p>
         </div>
+      </div></div>
+    </section>
 
-        <div class="spotlight">
-          <div class="head">DeWanna Bonner · Veteran Calm</div>
-          <div class="body">Bonner is back in Phoenix where she made her name. Her efficiency and late-clock shot-making will matter most in the half-court reset moments.</div>
-        </div>
-
-        <div class="spotlight">
-          <div class="head">Watch: Olivia Miles (MIN)</div>
-          <div class="body">Lynx rookie/young guard had <strong>21 pts</strong> in their opening loss to Atlanta. With Collier out, Minnesota will lean on perimeter scoring — Miles is the wild card.</div>
-        </div>
-
+    <section class="accordion-item" id="section-5">
+      <div class="accordion-header" onclick="toggleAccordion('section-5')" role="button" tabindex="0">
+        <div class="section-num">5</div>
+        <div class="section-title">Team Comparison</div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
-    </div>
-  </div>
-
-  <!-- 5. TEAM COMPARISON -->
-  <div class="accordion-item" id="acc5">
-    <div class="accordion-header" onclick="toggleAccordion('acc5')">
-      <div class="section-num">5</div>
-      <div class="section-title">Team Comparison (2026 to date)</div>
-      <svg class="chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div>
-    <div class="accordion-body">
-      <div class="accordion-body-inner">
-
+      <div class="accordion-body"><div class="accordion-body-inner">
         <div class="card">
-          <div class="card-label">MIN ← Stat → PHX</div>
-          <div class="comp-row">
-            <div class="min-val">0-1</div>
-            <div class="label">Record</div>
-            <div class="phx-val win">1-1</div>
-          </div>
-          <div class="comp-row">
-            <div class="min-val">68.2</div>
-            <div class="label">PPG</div>
-            <div class="phx-val win">89.0</div>
-          </div>
-          <div class="comp-row">
-            <div class="min-val">50.0%</div>
-            <div class="label">FG%</div>
-            <div class="phx-val">48.9%</div>
-          </div>
-          <div class="comp-row">
-            <div class="min-val">27.8%</div>
-            <div class="label">3PT%</div>
-            <div class="phx-val win">47.8%</div>
-          </div>
-          <div class="comp-row">
-            <div class="min-val">5.0</div>
-            <div class="label">3PM</div>
-            <div class="phx-val win">11.0</div>
-          </div>
-          <div class="comp-row">
-            <div class="min-val">L1</div>
-            <div class="label">Streak</div>
-            <div class="phx-val">L1</div>
-          </div>
+          <div class="comp-row"><div class="chi-val win">2-0</div><div class="label">Record</div><div class="phx-val">1-2</div></div>
+          <div class="comp-row"><div class="chi-val win">W2</div><div class="label">Streak</div><div class="phx-val">L2</div></div>
+          <div class="comp-row"><div class="chi-val win">2-0</div><div class="label">Road/Home</div><div class="phx-val">0-1</div></div>
+          <div class="comp-row"><div class="chi-val">Rickea Jackson 18.5</div><div class="label">PPG lead</div><div class="phx-val">Kahleah Copper 18.0</div></div>
+          <div class="comp-row"><div class="chi-val">Cardoso 10.5</div><div class="label">RPG lead</div><div class="phx-val">Mack 9.0</div></div>
+          <div class="comp-row"><div class="chi-val">Diggins 7.0</div><div class="label">APG lead</div><div class="phx-val win">Thomas 9.3</div></div>
+          <p class="source-note">Comparison pulled from <a href="https://www.espn.com/wnba/game/_/gameId/401856913/sky-mercury">ESPN Gamecast</a> and checked against Covers team pages.</p>
         </div>
-
         <div class="card">
-          <div class="card-label">Last 5 Mercury Games</div>
-          <ul class="bullet-list">
-            <li><strong>W 99-66</strong> @ Las Vegas (May 9) — largest road win in franchise history; Mack 15 reb</li>
-            <li><em>L 79-95</em> @ Golden State (May 10) — 17 TOs; AT 19/11/9</li>
-          </ul>
+          <div class="card-label">Recent form</div>
+          <p class="card-text">Chicago opened with wins at Portland and Golden State. Phoenix opened with the 99-66 statement at Las Vegas, then dropped games at Golden State and home against Minnesota.</p>
+          <p class="source-note">Results verified through <a href="https://www.covers.com/sport/basketball/wnba/teams/main/chicago-sky">Covers Chicago</a>, <a href="https://www.covers.com/sport/basketball/wnba/teams/main/phoenix-mercury">Covers Phoenix</a>, and <a href="https://www.cbssports.com/wnba/teams/PHO/phoenix-mercury/schedule/">CBS Sports Phoenix schedule</a>.</p>
         </div>
+      </div></div>
+    </section>
 
+    <section class="accordion-item" id="section-6">
+      <div class="accordion-header" onclick="toggleAccordion('section-6')" role="button" tabindex="0">
+        <div class="section-num">6</div>
+        <div class="section-title">Betting Intel</div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
-    </div>
-  </div>
-
-  <!-- 6. BETTING INTEL -->
-  <div class="accordion-item" id="acc6">
-    <div class="accordion-header" onclick="toggleAccordion('acc6')">
-      <div class="section-num">6</div>
-      <div class="section-title">Betting Intel</div>
-      <svg class="chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div>
-    <div class="accordion-body">
-      <div class="accordion-body-inner">
-
-        <div class="bet-grid">
-          <div class="bet-cell">
-            <div class="label">Spread</div>
-            <div class="value">PHX -3.5</div>
-          </div>
-          <div class="bet-cell">
-            <div class="label">Total</div>
-            <div class="value">169.5</div>
-          </div>
-          <div class="bet-cell">
-            <div class="label">PHX ML</div>
-            <div class="value">-175</div>
-          </div>
-          <div class="bet-cell">
-            <div class="label">MIN ML</div>
-            <div class="value">+145</div>
-          </div>
-        </div>
-
+      <div class="accordion-body"><div class="accordion-body-inner">
         <div class="card">
-          <div class="card-label">Line Read</div>
-          <div class="card-text">
-            Books at <strong>PHX -3.5</strong> with the total around <strong>169-170</strong>. Spreads have ranged from -3.5 to -4.5 across books, reflecting the Collier absence. Mercury were <em>15-16 ATS</em> as favorites last season — modest discipline required.
-          </div>
+          <div class="stat-row"><span class="label">Covers spread</span><span class="value highlight">Phoenix -4.5</span></div>
+          <div class="stat-row"><span class="label">Covers total</span><span class="value">166.5</span></div>
+          <div class="stat-row"><span class="label">Moneyline snapshot</span><span class="value">PHX -180 · CHI +150</span></div>
+          <div class="stat-row"><span class="label">Phoenix ATS</span><span class="value warn">1-2-0</span></div>
+          <div class="stat-row"><span class="label">Chicago ATS</span><span class="value highlight">2-0-0</span></div>
+          <p class="source-note">Market data changes quickly. Snapshot from <a href="https://www.covers.com/sport/basketball/wnba/matchup/373865">Covers matchup</a> and <a href="https://www.covers.com/sport/basketball/wnba/matchup/373865/odds">Covers odds</a>.</p>
         </div>
-
-        <div class="card">
-          <div class="card-label">Model Lean</div>
-          <div class="card-text">
-            SportsGambler model projection: <strong>PHX 83, MIN 82</strong> — closer than the market. Mercury bench production at home is the swing variable; if AT/Copper combine for 40+, the spread covers comfortably.
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- 7. SCHEDULE LOOKAHEAD -->
-  <div class="accordion-item" id="acc7">
-    <div class="accordion-header" onclick="toggleAccordion('acc7')">
-      <div class="section-num">7</div>
-      <div class="section-title">Schedule Lookahead</div>
-      <svg class="chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div>
-    <div class="accordion-body">
-      <div class="accordion-body-inner">
-
-        <div class="card">
-          <div class="card-label">Next 4 Games · All Home</div>
-          <div class="calendar-item">
-            <div class="cal-date"><div class="mo">May</div><div class="day">12</div></div>
-            <div class="cal-body">
-              <div class="cal-opp">vs Minnesota Lynx</div>
-              <div class="cal-meta">Tonight · 7:00 PM MST · Home Opener</div>
-            </div>
-          </div>
-          <div class="calendar-item">
-            <div class="cal-date"><div class="mo">May</div><div class="day">15</div></div>
-            <div class="cal-body">
-              <div class="cal-opp">vs Chicago Sky</div>
-              <div class="cal-meta">Fri · 7:00 PM MST · Mortgage Matchup Center</div>
-            </div>
-          </div>
-          <div class="calendar-item">
-            <div class="cal-date"><div class="mo">May</div><div class="day">19</div></div>
-            <div class="cal-body">
-              <div class="cal-opp">vs Toronto Tempo</div>
-              <div class="cal-meta">Tue · 7:00 PM MST · Mortgage Matchup Center</div>
-            </div>
-          </div>
-          <div class="calendar-item">
-            <div class="cal-date"><div class="mo">May</div><div class="day">21</div></div>
-            <div class="cal-body">
-              <div class="cal-opp">vs Los Angeles Sparks</div>
-              <div class="cal-meta">Thu · 7:00 PM MST · Mortgage Matchup Center</div>
-            </div>
-          </div>
-        </div>
-
         <div class="quote-block">
-          Home-heavy May. Four straight at the Mortgage Matchup Center is a chance to bank wins and set the tone before a tougher June road slate.
-          <span class="attr">— AVC Strategic Note</span>
+          This is less about chasing the number and more about reading the game state: if Phoenix controls tempo and prevents Chicago's defense from creating transition, the favorite profile makes sense.
+          <span class="who">AVC read</span>
         </div>
+      </div></div>
+    </section>
 
+    <section class="accordion-item" id="section-7">
+      <div class="accordion-header" onclick="toggleAccordion('section-7')" role="button" tabindex="0">
+        <div class="section-num">7</div>
+        <div class="section-title">Schedule Lookahead</div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
-    </div>
-  </div>
+      <div class="accordion-body"><div class="accordion-body-inner">
+        <div class="card">
+          <div class="calendar-item">
+            <div class="calendar-date">Tonight</div>
+            <div><div class="calendar-title">vs Chicago · 7:00 PM MST · ION</div><div class="calendar-detail">Chance to stabilize the home stand.</div></div>
+          </div>
+          <div class="calendar-item">
+            <div class="calendar-date">May 19</div>
+            <div><div class="calendar-title">vs Toronto · 7:00 PM MST</div><div class="calendar-detail">Expansion opponent at Mortgage Matchup Center.</div></div>
+          </div>
+          <div class="calendar-item">
+            <div class="calendar-date">May 21</div>
+            <div><div class="calendar-title">vs Los Angeles · 7:00 PM MST · Prime Video</div><div class="calendar-detail">National-window home game.</div></div>
+          </div>
+          <div class="calendar-item">
+            <div class="calendar-date">May 24</div>
+            <div><div class="calendar-title">@ Atlanta · 12:00 PM MST</div><div class="calendar-detail">First road response after the home stretch.</div></div>
+          </div>
+          <p class="source-note">Upcoming schedule checked against <a href="https://www.cbssports.com/wnba/teams/PHO/phoenix-mercury/schedule/">CBS Sports schedule</a> and <a href="https://www.espn.com/wnba/team/schedule/_/name/phx">ESPN Phoenix schedule</a>.</p>
+        </div>
+      </div></div>
+    </section>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <div class="footer-tagline">#DOMINATE</div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" width="140" height="26">
+    <section class="accordion-item" id="section-8">
+      <div class="accordion-header" onclick="toggleAccordion('section-8')" role="button" tabindex="0">
+        <div class="section-num">8</div>
+        <div class="section-title">Accuracy Check</div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="accordion-body"><div class="accordion-body-inner">
+        <div class="card">
+          <div class="card-label">Pre-ship verification</div>
+          <ul class="bullet-list">
+            <li><strong>Matchup:</strong> Chicago Sky at Phoenix Mercury verified on ESPN, CBS Sports, and the Mercury national broadcast release.</li>
+            <li><strong>Time:</strong> 7:00 PM MST / 10:00 PM ET verified via CBS/ESPN schedule pages and Mercury broadcast release.</li>
+            <li><strong>Venue:</strong> Mortgage Matchup Center verified on ESPN/CBS schedule pages.</li>
+            <li><strong>Broadcast:</strong> ION verified on the Mercury national broadcast release and ESPN Sky schedule.</li>
+            <li><strong>Records:</strong> Chicago 2-0 and Phoenix 1-2 verified on ESPN Gamecast.</li>
+            <li><strong>Injuries:</strong> Covers matchup page used as the working source, with a note to re-check near tip because ESPN's fetched injury page did not show PHX/CHI rows.</li>
+          </ul>
+        </div>
+      </div></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="dominate">#DOMINATE</div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" width="140" height="26" style="margin:0 auto" aria-label="AVC">
       <circle cx="32" cy="32" r="30" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.12"/>
       <circle cx="32" cy="32" r="22" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.25"/>
       <circle cx="32" cy="32" r="14" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.45"/>
@@ -705,11 +516,10 @@ body { padding: max(env(safe-area-inset-top), 0px) max(env(safe-area-inset-right
       <text x="94" y="38" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="800" font-size="28" fill="rgba(255,255,255,0.4)" letter-spacing="-0.5">AVC</text>
       <text x="94" y="53" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="400" font-size="7.8" fill="rgba(255,255,255,0.25)" letter-spacing="2.4">ACCELERATED VELOCITY CONSULTING</text>
     </svg>
-    <div class="footer-message">Good luck tonight, Mat. Take care of home.</div>
-    <div class="footer-ts">Generated Tue, May 12, 2026 · 2:51 PM MST</div>
+    <div class="footer-msg">Good luck tonight, Mat.</div>
+    <div class="timestamp">Generated May 15, 2026 · Accuracy checked before deployment</div>
     <div class="footer-accent"></div>
-  </div>
-
+  </footer>
 </div>
 
 <script>
@@ -734,6 +544,15 @@ document.querySelector('.header').addEventListener('click', function() {
       else i.classList.add('open');
     });
   }
+});
+
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      header.click();
+    }
+  });
 });
 </script>
 </body>
